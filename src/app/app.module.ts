@@ -52,6 +52,15 @@ import { InshuranceComponent } from './inshurance/inshurance.component';
 import { EducationComponent } from './education/education.component';
 import { GovernmentPublicSectorComponent } from './government-public-sector/government-public-sector.component';
 import { ComputingSoftwareComponent } from './computing-software/computing-software.component';
+import { TestingComponent } from './testing/testing.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { OurLeadershipTeamComponent } from './our-leadership-team/our-leadership-team.component';
+import { OurClientsComponent } from './our-clients/our-clients.component';
+import { CodeOfConductComponent } from './code-of-conduct/code-of-conduct.component';
+import { ValuePropositionComponent } from './value-proposition/value-proposition.component';
+import { SafeShoreMethodologyComponent } from './safe-shore-methodology/safe-shore-methodology.component';
+import { RigFrameworkComponent } from './rig-framework/rig-framework.component';
+import { AwardAndRecoginationComponent } from './award-and-recogination/award-and-recogination.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +91,7 @@ import { ComputingSoftwareComponent } from './computing-software/computing-softw
     CyberSecurityComponent,
     DataanylistComponent,
     DevopsComponent,
-   
+
     ECommercedevelopmentComponent,
     JavafullstackComponent,
     MobileappdevelopmentComponent,
@@ -105,7 +114,17 @@ import { ComputingSoftwareComponent } from './computing-software/computing-softw
     InshuranceComponent,
     EducationComponent,
     GovernmentPublicSectorComponent,
-    ComputingSoftwareComponent
+    ComputingSoftwareComponent,
+    TestingComponent,
+    
+    AboutUsComponent,
+    OurLeadershipTeamComponent,
+    OurClientsComponent,
+    CodeOfConductComponent,
+    ValuePropositionComponent,
+    SafeShoreMethodologyComponent,
+    RigFrameworkComponent,
+    AwardAndRecoginationComponent
   ],
   imports: [
     BrowserModule,

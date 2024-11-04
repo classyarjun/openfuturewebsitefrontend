@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
+import { AboutUsComponent } from './about-us/about-us.component';
+
 import { SliderComponent } from './slider/slider.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -57,7 +60,7 @@ const routes: Routes = [
    {path:'slider',component:SliderComponent},
    {path:'services',component:ServicesComponent},
    {path:'aboutus',component:AboutusComponent},
-  
+    {path:'aboutUs',component:AboutUsComponent},
    {path:'sap',component:SapComponent},
    {path:'python',component:PythonComponent},
    {path:'linux',component:LinuxComponent},

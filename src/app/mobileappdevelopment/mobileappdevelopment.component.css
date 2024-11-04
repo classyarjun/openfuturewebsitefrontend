@@ -92,7 +92,7 @@
   /* Common styles for both image halves */
   .split {
     flex: 1;
-    background-image: url('../'); /* Use the image as a background */
+    /* background-image: url('../');  */
     background-size: 200% 100%; /* Double the width to show only half on each side */
     background-repeat: no-repeat;
   }
@@ -410,6 +410,6 @@
   }
   .right-side h1, .sap-heading {
     background: linear-gradient(90deg, #08086d, #4a90e2, #bad7f4);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
   }

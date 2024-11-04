@@ -1,0 +1,37 @@
+<div class="our-services">
+    <!-- Background Container -->
+    <div class="background-container">
+      <p>What we offer</p>
+      <h1><b>Our Solution</b></h1>
+      <!-- Conditionally render the slider when isSliderVisible is true -->
+      <div class="service-slider" *ngIf="isSliderVisible">
+        <div class="service-list" [style.transform]="getTransform()">
+          <!-- Loop through all service groups (each group contains 3 services) -->
+          <div class="service-slide" *ngFor="let group of serviceGroups">
+            <div class="service-card" *ngFor="let service of group" style="background-image: url('../../assets/bg.png');">
+              <div class="image-container">
+                <div class="overlay">
+                  <div class="text-container">
+                    <h3>{{ service.title }}</h3>
+                    <h3>{{ service.description }}</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="service-info">
+                <!-- Optional: Add service title here if needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Dots Navigation inside the Background Container -->
+      <div class="slider-dots">
+        <span *ngFor="let group of serviceGroups; let i = index"
+              [class.active]="i === currentSlide"
+              (click)="goToSlide(i)">
+        </span>
+      </div>
+    </div>
+  </div>
+  

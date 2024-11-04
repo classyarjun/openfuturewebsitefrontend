@@ -1,0 +1,476 @@
+/* Header Section */
+.header {
+    background: url('../../assets/solution Background image/Custom Digital Platforms.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    height: 250px;
+  }
+ 
+  .header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+ 
+  .header-content p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.2em;
+  }
+   /* Content section */
+   .content-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+ 
+  .content-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+ 
+  .content-image img {
+    width: 100%;
+    max-width: 500px; /* Increased the max width */
+    height: 60%;
+    border-radius: 8px;
+  }
+  .content-text {
+    max-width: 500px;
+    margin-left: 80px; /* Adds space between image and text */
+  }
+ 
+  .content-text p {
+    text-align: justify; /* Aligns the text */
+    line-height: 1.6;
+  }
+ 
+  /* Why Us Section */
+  .why-us {
+    background-color: #092541;
+    color: #000000;
+    padding: 50px 20px;
+    text-align: center;
+   
+  }
+ 
+  .why-us h2 {
+    color: white;
+  }
+ 
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+ 
+  .card {
+    background-color: #fdfeff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+  }
+ 
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+ 
+  /* Offerings Section */
+  .offerings {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f0f5ff;
+  }
+ 
+  .offerings h2 {
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 30px;
+  }
+ 
+  .offer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+ 
+  .offer-card {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+  }
+ 
+  .offer-card:hover {
+    transform: scale(1.05);
+  }
+ 
+  .offer-card h3 {
+    font-size: 1.2em;
+    color: #003366;
+    margin: 0;
+  }
+ 
+  .offer-card p {
+    margin-top: 10px;
+    color: #666;
+    display: none;
+ 
+  }
+ 
+  .offer-card:hover p {
+    display: block;
+    opacity: 1;
+    color: #003366;
+  }
+ 
+  /* Adding a number badge */
+  .offer-card::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+ 
+ 
+  * Main container for the layout */
+  .sap-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 20px;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1500px;
+      margin: 0 auto;
+      background-color: #f7f7f7;
+    }
+   
+    .sap-image-container {
+      position: relative;
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 40%;
+    }
+   
+    .sap-image {
+      width: 95%;
+      height: auto;
+      border-radius: 10px;
+    }
+   
+    /* Text overlay on the image */
+    .sap-text-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 30px;
+      background-color: rgba(13, 59, 102, 0.8); /* Dark blue with transparency */
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+   
+    /* Content section for text */
+    .sap-content {
+      flex: 1;
+      max-width: 60%;
+    }
+   
+    .sap-content h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+   
+    .sap-content h4 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #020202;
+    }
+   
+    .sap-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+    }
+   
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .sap-container {
+        flex-direction: column;
+        align-items: center;
+      }
+   
+      .sap-image-container, .sap-content {
+        max-width: 100%;
+      }
+    }
+   
+ 
+ 
+ 
+ 
+    /* Container and Grid Styling */
+  .sap-offerings-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+   
+    .sap-heading {
+      color: #1d71b8;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+   
+    .sap-offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+   
+    .sap-card {
+      position: relative;
+      background-color: #f0f3f5;
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+   
+    /* Card Hover Animation */
+    .sap-card:hover {
+      transform: translateY(-10px);
+    }
+   
+    .card-content {
+      z-index: 2;
+      position: relative;
+    }
+   
+    .number-circle {
+      width: 40px;
+      height: 40px;
+      background-color: #1d71b8;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      margin: 0 auto 10px auto;
+    }
+   
+    .more-info {
+      background-color: #1d71b8;
+      color: white;
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+   
+    /* Overlay Text Styling */
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(13, 59, 102, 0.9);
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+   
+    /* Show the text on hover */
+    .sap-card:hover .card-overlay {
+      opacity: 1;
+    }
+   
+    @media (max-width: 768px) {
+      .sap-offerings-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+   
+    @media (max-width: 480px) {
+      .sap-offerings-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+   
+ 
+ 
+    /* Main container styling */
+  .sap-offerings-container {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+   
+    .sap-heading {
+      color: #1d71b8;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+   
+   /* Grid Layout */
+  .sap-offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+   
+    .sap-card {
+      background-color: #fff;
+      border: 1px solid #ddd; /* Light gray border */
+      border-bottom: 10px solid #1d71b8; /* Blue border at the top */
+      border-radius: 8px; /* Rounded corners */
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden; /* Ensure the hover-text stays inside the card */
+      margin-bottom: -1px; /* Negative margin to overlap with the next card */
+  }
+ 
+  .sap-offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+      gap: 20px; /* Space between cards */
+  }
+ 
+  /* Adjustments for responsiveness */
+  @media (max-width: 768px) {
+      .sap-offerings-grid {
+          grid-template-columns: repeat(2, 1fr); /* For smaller screens */
+      }
+  }
+ 
+  @media (max-width: 480px) {
+      .sap-offerings-grid {
+          grid-template-columns: 1fr; /* For extra small screens */
+      }
+  }
+ 
+    /* Square Container */
+  .number-square {
+      width: 40px; /* Set the width for the square */
+      height: 40px; /* Set the height for the square */
+      background-color: #1d71b8; /* Background color for the square */
+      color: white; /* Text color */
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      border-radius: 5px; /* Optional: for slightly rounded corners */
+      font-size: 1.5rem; /* Font size for the number */
+      font-weight: bold; /* Bold font */
+      margin: 0 auto 15px auto; /* Center the square in the card */
+  }
+ 
+   
+    .sap-card h4 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+   
+    .info-icon {
+      width: 30px;
+      height: 30px;
+      background-color: #1d71b8;
+      color: white;
+      font-size: 1.2rem;
+      line-height: 30px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+   
+    .sap-card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+   
+    /* Hover text styling */
+    .hover-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(47, 9, 216, 0.9); /* Blue color with slight transparency */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none; /* Prevent the hover text from being clickable */
+      z-index: 1;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 10px;
+    }
+   
+    .sap-card:hover .hover-text {
+      opacity: 1;
+    }
+   
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .sap-offerings-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+   
+    @media (max-width: 480px) {
+      .sap-offerings-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .info-icon {
+      width: 30px;
+      height: 30px;
+     
+      font-size: 1.5rem; /* Adjust the size as needed */
+      display: inline-block;
+      margin-top: 4px; /* Optional: add spacing */
+  }

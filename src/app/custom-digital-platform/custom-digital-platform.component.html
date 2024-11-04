@@ -1,0 +1,69 @@
+
+
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Digital Platforms</title>
+ 
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Custom Digital Platforms</h1>
+           
+        </div>
+    </header>
+     <!-- Image and Content Section -->
+     <section class="content-section">
+      <div class="content-container">
+          <div class="content-image">
+              <img src="../../assets/Solution page images/Customer Digital Platforms.jpg" alt="Digital Platform" />
+          </div>
+          <div class="content-text">
+            <h1>Custom Digital Platforms</h1>
+              <p>At OpenFuture Technology Solutions, we specialize in building custom digital platforms that align perfectly with your business goals. From sophisticated websites to advanced mobile apps, our team develops bespoke solutions that address the specific needs of your enterprise. We understand that every business is unique, and a one-size-fits-all approach simply doesn’t cut it. Our platforms are designed with the primary objective of enhancing your business's operational efficiency, streamlining workflows, and ensuring an optimal user experience.</p>
+              <p>We blend cutting-edge technology with creativity to create digital platforms that not only meet your functional requirements but also deliver a rich, engaging user experience. We prioritize ease of navigation, responsiveness across devices, and robust performance under heavy load. Each platform is crafted with your customers in mind, enhancing their interaction with your brand and driving loyalty.</p>
+          </div>
+      </div>
+  </section>
+ 
+    <!-- Why Us Section -->
+    <section class="why-us">
+        <h2>Why Us?</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Tailored Solutions for Unique Business Needs</h3>
+                <p>We create fully customized digital platforms that align with your business goals.</p>
+            </div>
+            <div class="card">
+                <h3>Cutting-Edge Technology & Innovation</h3>
+                <p>We leverage modern tools to build innovative platforms that give your business a competitive edge.</p>
+            </div>
+            <div class="card">
+                <h3>Agile Development Process</h3>
+                <p>Our agile development process ensures flexibility, transparency, and timely delivery.</p>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Our Offerings Section -->
+    <div class="sap-offerings-container">
+      <h2 class="sap-heading">WE OFFERINGS</h2>
+      <div class="sap-offerings-grid">
+          <div class="sap-card" *ngFor="let item of sapOfferings">
+              <div class="number-square">{{ item.number }}</div>
+              <h4>{{ item.title }}</h4>
+              <div class="info-icon"><span class="material-icons">chevron_right</span></div>
+ 
+              <div class="hover-text">{{ item.description }}</div>
+          </div>
+      </div>
+  </div>
+ 
+</body>
+</html>
+ 

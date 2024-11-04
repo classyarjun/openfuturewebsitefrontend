@@ -99,6 +99,8 @@ body {
 
 .split {
   flex: 1;
+
+
   /* background-image: url('src/assets/Java Full Stack Development.jpg'); */
   background-size: cover;
   background-position: center;

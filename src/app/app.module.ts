@@ -61,6 +61,14 @@ import { ValuePropositionComponent } from './value-proposition/value-proposition
 import { SafeShoreMethodologyComponent } from './safe-shore-methodology/safe-shore-methodology.component';
 import { RigFrameworkComponent } from './rig-framework/rig-framework.component';
 import { AwardAndRecoginationComponent } from './award-and-recogination/award-and-recogination.component';
+import { ECommerceComponent } from './e-commerce/e-commerce.component';
+import { ConsumerElectronicsComponent } from './consumer-electronics/consumer-electronics.component';
+import { BankingComponent } from './banking/banking.component';
+import { SportComponent } from './sport/sport.component';
+import { NewsComponent } from './news/news.component';
+import { FintechComponent } from './fintech/fintech.component';
+import { AgricultureComponent } from './agriculture/agriculture.component';
+import { RealEstateComponent } from './real-estate/real-estate.component';
 
 @NgModule({
   declarations: [
@@ -124,7 +132,15 @@ import { AwardAndRecoginationComponent } from './award-and-recogination/award-an
     ValuePropositionComponent,
     SafeShoreMethodologyComponent,
     RigFrameworkComponent,
-    AwardAndRecoginationComponent
+    AwardAndRecoginationComponent,
+    ECommerceComponent,
+    ConsumerElectronicsComponent,
+    BankingComponent,
+    SportComponent,
+    NewsComponent,
+    FintechComponent,
+    AgricultureComponent,
+    RealEstateComponent
   ],
   imports: [
     BrowserModule,

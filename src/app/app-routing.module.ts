@@ -3,9 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
-import { AboutUsComponent } from './about-us/about-us.component';
-
 import { SliderComponent } from './slider/slider.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -51,6 +48,25 @@ import { TravelTourismComponent } from './travel-tourism/travel-tourism.componen
 import { EducationComponent } from './education/education.component';
 import { GovernmentPublicSectorComponent } from './government-public-sector/government-public-sector.component';
 import { ComputingSoftwareComponent } from './computing-software/computing-software.component';
+
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ValuePropositionComponent } from './value-proposition/value-proposition.component';
+import { AwardAndRecoginationComponent } from './award-and-recogination/award-and-recogination.component';
+import { CodeOfConductComponent } from './code-of-conduct/code-of-conduct.component';
+import { OurClientsComponent } from './our-clients/our-clients.component';
+import { RigFrameworkComponent } from './rig-framework/rig-framework.component';
+import { SafeShoreMethodologyComponent } from './safe-shore-methodology/safe-shore-methodology.component';
+import { OurLeadershipTeamComponent } from './our-leadership-team/our-leadership-team.component';
+
+import { FintechComponent } from './fintech/fintech.component';
+import { ECommerceComponent } from './e-commerce/e-commerce.component';
+import { BankingComponent } from './banking/banking.component';
+import { AgricultureComponent } from './agriculture/agriculture.component';
+import { NewsComponent } from './news/news.component';
+import { RealEstateComponent } from './real-estate/real-estate.component';
+import { SportComponent } from './sport/sport.component';
+import { ConsumerElectronicsComponent } from './consumer-electronics/consumer-electronics.component';
+
 
 const routes: Routes = [
 
@@ -102,6 +118,26 @@ const routes: Routes = [
    {path:'education',component:EducationComponent},
    {path:'government-public-sector',component:GovernmentPublicSectorComponent},
    {path:'computing-software',component:ComputingSoftwareComponent},
+
+   {path:'value-propositon',component:ValuePropositionComponent},
+   {path:'award-and-recogination',component:AwardAndRecoginationComponent},
+   {path:'code-of-conduct',component:CodeOfConductComponent},
+   {path:'our-clients',component:OurClientsComponent},
+   {path:'rig-framework',component:RigFrameworkComponent},
+   {path:'safe-shore-methodology',component:SafeShoreMethodologyComponent},
+   {path:'our-leadership',component:OurLeadershipTeamComponent},
+
+
+
+   {path:'ecommerce',component:ECommerceComponent},
+   {path:'banking',component:BankingComponent},
+   {path:'agriculture',component:AgricultureComponent},
+   {path:'fintech',component:FintechComponent},
+   {path:'news',component:NewsComponent},
+   {path:'real-estate',component:RealEstateComponent},
+   {path:'sport',component:SportComponent},
+   {path:'insurance',component:InshuranceComponent},
+   {path:'consumer-electronics',component:ConsumerElectronicsComponent}
 
 ];
 

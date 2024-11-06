@@ -1,27 +1,34 @@
-
-
-<app-navbar></app-navbar>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Digital Platforms</title>
- 
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="header-content">
-            <h1>Custom Digital Platforms</h1>
-           
+
+    <div class="breadcrumb-area text-center shadow dark text-light bg-cover"
+    style="background-image: url('/assets/solution Background image/Scalable  Software Architecture.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-lg-auto">
+          <h1 class="display-2 text-uppercase">Custom Digital Platforms </h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="#" class="text-light"> Solutions</a></li>
+              <li class="active">Custom Digital Platforms</li>
+            </ol>
+          </nav>
         </div>
-    </header>
+      </div>
+    </div>
+  </div>
+
      <!-- Image and Content Section -->
      <section class="content-section">
-      <div class="content-container">
+      <div class="content-container justify-content-center">
           <div class="content-image">
-              <img src="../../assets/Solution page images/Customer Digital Platforms.jpg" alt="Digital Platform" />
+              <img src="/assets/Solution page images/Customer Digital Platforms.jpg" alt="Digital Platform" />
           </div>
           <div class="content-text">
             <h1>Custom Digital Platforms</h1>
@@ -30,7 +37,7 @@
           </div>
       </div>
   </section>
- 
+
     <!-- Why Us Section -->
     <section class="why-us">
         <h2>Why Us?</h2>
@@ -49,7 +56,7 @@
             </div>
         </div>
     </section>
- 
+
     <!-- Our Offerings Section -->
     <div class="sap-offerings-container">
       <h2 class="sap-heading">WE OFFERINGS</h2>
@@ -58,12 +65,11 @@
               <div class="number-square">{{ item.number }}</div>
               <h4>{{ item.title }}</h4>
               <div class="info-icon"><span class="material-icons">chevron_right</span></div>
- 
+
               <div class="hover-text">{{ item.description }}</div>
           </div>
-      </div>
+      </div>
   </div>
- 
+
 </body>
 </html>
- 

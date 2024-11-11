@@ -206,3 +206,21 @@ overflow-y: scroll;
   height: 25px;
   z-index: 0;
 }
+
+
+.shape-left-top {
+  position: absolute;
+  top:0%;
+  left: 0%;
+  width: 330px;
+  height: 330px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (max-width: 480px) {
+  .shape-left-top{
+    display:none;
+  }
+}

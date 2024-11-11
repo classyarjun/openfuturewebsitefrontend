@@ -1,48 +1,44 @@
-<app-navbar></app-navbar>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Business Automation Solutions
- 
- 
- 
-    </title>
- 
-</head>
-<body>
+
     <!-- Header Section -->
-    <header class="header">
+    <div class="header-container">
+        <img src="/assets/solution Background image/Business Automation Solutions.jpg" alt="Header Image" class="header-image" />
+
+        <!-- Centered Content -->
         <div class="header-content">
-            <h1>Business Automation Solutions
- 
- 
-            </h1>
-           
+          <h1>Business Automation Solutions
+        </h1>
+          <p> Business Automation Solutions
+        </p>
         </div>
-    </header>
+    </div>
      <!-- Image and Content Section -->
-     <section class="content-section">
-      <div class="content-container">
-          <div class="content-image">
-              <img src="../../assets/Solution page images/Business Automation Solutions.jpg" alt=" Business Automation Solutions
- 
-              " />
-          </div>
-          <div class="content-text">
-            <h1>Business Automation Solutions
- 
-            </h1>
-              <p>At OpenFuture Technology Solutions, we help businesses improve efficiency and productivity by
-                automating routine and time-consuming processes. Our business automation solutions
-                streamline workflows, reduce manual work, and enable more efficient resource management,
-                allowing your team to focus on more strategic tasks that drive growth.
-              </p>
-          </div>
-      </div>
-  </section>
- 
+     <div class="content-container">
+        <!-- Left Side: Split Image with overlay text -->
+        <div class="main-container">
+            <div class="split-image-container">
+                <div class="split left"></div>
+                <div class="split right"></div>
+                <div class="overlay-text">
+                    <h2>solutions >Business Automation Solutions</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Text Content -->
+        <div class="text-container">
+          <h2> Business Automation Solutions</h2>
+
+
+        <p>At OpenFuture Technology Solutions, we help businesses improve efficiency and productivity by
+            automating routine and time-consuming processes. Our business automation solutions
+            streamline workflows, reduce manual work, and enable more efficient resource management,
+            allowing your team to focus on more strategic tasks that drive growth.
+            .</p>
+
+
+        </div>
+        </div>
+
     <!-- Why Us Section -->
     <section class="why-us">
         <h2>Why Us?</h2>
@@ -57,21 +53,21 @@
                 <h3> Customized Workflows</h3>
                 <p>We tailor automation solutions to your specific business
                   needs, ensuring seamless integration and alignment with your operations.
-                 
-                 
+
+
                 </p>
             </div>
             <div class="card">
                 <h3> Focus on Growth</h3>
-                 
+
                 <p> By automating routine tasks, we enable your team to focus on
                   strategic growth initiatives and innovation..
-                 
+
                   </p>
             </div>
         </div>
     </section>
- 
+
     <!-- Our Offerings Section -->
     <div class="sap-offerings-container">
       <h2 class="sap-heading">WE OFFERINGS</h2>
@@ -79,13 +75,10 @@
           <div class="sap-card" *ngFor="let item of sapOfferings">
               <div class="number-square">{{ item.number }}</div>
               <h4>{{ item.title }}</h4>
-              <div class="info-icon"><span class="material-icons">chevron_right</span></div>
- 
+              <div class="info-icon"><span class="material-icons"> > </span></div>
+
               <div class="hover-text">{{ item.description }}</div>
           </div>
-      </div>
+   </div>
   </div>
- 
-</body>
-</html>
- 
+

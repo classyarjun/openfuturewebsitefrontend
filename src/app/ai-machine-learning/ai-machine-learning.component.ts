@@ -6,10 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ai-machine-learning.component.css']
 })
 export class AiMachineLearningComponent {
-
   sapOfferings = [
- 
- 
     {
       number: 1,
       title: 'AI-Powered Automation',
@@ -25,10 +22,5 @@ export class AiMachineLearningComponent {
       title: 'Natural Language Processing (NLP)',
       description: 'We offer NLP applications that enhance user interactions and extract valuable insights from textual data, improving customer engagement and satisfaction.'
     }
-   
-   
-   
-   
-    ];
+  ];
   }
-   

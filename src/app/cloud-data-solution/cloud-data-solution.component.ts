@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class CloudDataSolutionComponent {
 
   sapOfferings = [
- 
- 
+
+
     {
       number: 1,
       title: 'Cloud Infrastructure Design',
@@ -25,7 +25,6 @@ export class CloudDataSolutionComponent {
       title: 'Real-Time Analytics Solutions',
       description: 'We implement advanced analytics tools that provide insights in real-time, helping you optimize operations and make informed, data-driven decisions.'
     }
-   
-    ];
+
+  ];
   }
-  

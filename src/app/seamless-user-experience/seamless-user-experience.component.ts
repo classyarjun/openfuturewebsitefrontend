@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SeamlessUserExperienceComponent {
   sapOfferings = [
- 
- 
     {
       number: 1,
       title: 'UI/UX Design & Development',
@@ -24,13 +22,6 @@ export class SeamlessUserExperienceComponent {
       title: 'Behavior Analysis',
       description: 'Our behavior analysis services provide data-driven insights into user behavior, helping you optimize the user experience. By understanding how users interact with your platform, we can make informed adjustments to improve engagement, satisfaction, and conversion rates.'
     }
-   
-    ];
-  }
-   
-   
-   
-   
-    
 
-   
+];
+  }

@@ -66,6 +66,15 @@ import { NewsComponent } from './news/news.component';
 import { RealEstateComponent } from './real-estate/real-estate.component';
 import { SportComponent } from './sport/sport.component';
 import { ConsumerElectronicsComponent } from './consumer-electronics/consumer-electronics.component';
+import { FullStackDevelopmentComponent } from './full-stack-development/full-stack-development.component';
+import { ContinuousIntegrationComponent } from './continuous-integration/continuous-integration.component';
+import { ComprehensiveDigitalComponent } from './comprehensive-digital/comprehensive-digital.component';
+import { DataDrivenComponent } from './data-driven/data-driven.component';
+import { ScalableSoftwareComponent } from './scalable-software/scalable-software.component';
+import { BusinessAnalystComponent } from './business-analyst/business-analyst.component';
+import { FraudAlertComponent } from './fraud-alert/fraud-alert.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CareersComponent } from './careers/careers.component';
 
 
 const routes: Routes = [
@@ -137,7 +146,17 @@ const routes: Routes = [
    {path:'real-estate',component:RealEstateComponent},
    {path:'sport',component:SportComponent},
    {path:'insurance',component:InshuranceComponent},
-   {path:'consumer-electronics',component:ConsumerElectronicsComponent}
+   {path:'consumer-electronics',component:ConsumerElectronicsComponent},
+   {path:'full-stack-development',component:FullStackDevelopmentComponent},
+   {path:'continuous-integration',component:ContinuousIntegrationComponent},
+   {path:'comprehensive-digital',component:ComprehensiveDigitalComponent},
+   {path:'data-driven',component:DataDrivenComponent},
+   {path:'scalable-software',component:ScalableSoftwareComponent},
+   {path:'website-development',component:WebsiteDevelopmentComponent},
+   {path:'business-analyst',component:BusinessAnalystComponent},
+   {path:'fraudalert',component:FraudAlertComponent},
+   {path:'contact-us',component:ContactUsComponent},
+   {path:'careers',component:CareersComponent},
 
 ];
 

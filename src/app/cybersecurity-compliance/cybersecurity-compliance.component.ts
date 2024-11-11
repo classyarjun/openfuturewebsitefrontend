@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cybersecurity-compliance.component.css']
 })
 export class CybersecurityComplianceComponent {
-
   sapOfferings = [
- 
- 
+
+
     {
       number: 1,
       title: 'Data Encryption',
@@ -25,7 +24,7 @@ export class CybersecurityComplianceComponent {
       title: 'Incident Response Planning',
       description: 'We develop comprehensive incident response plans that prepare your business for potential cybersecurity events, minimizing impact and ensuring swift recovery.'
     }
-   
-   
-    ];
+
+
+    ];
   }

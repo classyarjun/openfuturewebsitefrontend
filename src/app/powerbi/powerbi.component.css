@@ -93,7 +93,7 @@ body {
 /* Common styles for both image halves */
 .split {
   flex: 1;
-  /* background-image: url('src/assets/Power BI.jpg'); */
+   background-image: url('src/assets/SERVICES/Power BI.jpg');
   background-size: 200% 100%;
   background-repeat: no-repeat;
 }

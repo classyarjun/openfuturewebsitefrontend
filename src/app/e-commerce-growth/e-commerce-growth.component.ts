@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./e-commerce-growth.component.css']
 })
 export class ECommerceGrowthComponent {
-
   sapOfferings = [
- 
- 
+
+
     {
       number: 1,
       title: 'Custom E-commerce Platforms',
@@ -25,7 +24,7 @@ export class ECommerceGrowthComponent {
       title: 'Cart Optimization',
       description: 'Optimized product management and shopping cart systems that drive sales by improving the ease of purchase and reducing cart abandonment.'
     }
-   
-   
-    ];
+
+
+    ];
   }

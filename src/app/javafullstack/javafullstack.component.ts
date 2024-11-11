@@ -12,9 +12,9 @@ interface Offering {
 })
 export class JavafullstackComponent {
   Javafullstack: Offering[] = [];
- 
+
   constructor() { }
- 
+
   // OnInit lifecycle hook to initialize data
   ngOnInit(): void {
     // Populate the computingsoftware array with data
@@ -26,22 +26,22 @@ export class JavafullstackComponent {
       },
       {
         number: 2,
-        title: '● Frontend Development',
-        description: ': Our developers utilize modern technologies such as Angular and React to create intuitive and engaging user interfaces that enhance usability and responsiveness.'
+        title: ' Frontend Development',
+        description: 'Our developers utilize modern technologies such as Angular and React to create intuitive and engaging user interfaces that enhance usability and responsiveness.'
       },
       {
         number: 3,
-        title: '●API Integration',
+        title: 'API Integration',
         description: ' We design and implement RESTful APIs that facilitate smooth communication between the front end and back end, ensuring a cohesive application experience.'
       },
       {
         number: 4,
-        title: '●Database Management',
+        title: 'Database Management',
         description: ' Our team specializes in integrating various database solutions, including MySQL and PostgreSQL, to ensure reliable data storageand retrieval.'
       },
       {
         number: 5,
-        title: '● Cloud Deployment',
+        title: 'Cloud Deployment',
         description: 'We offer cloud-based deployment options, enabling your applications to scale effortlessly while ensuring high availability and performance.'
       },
       {

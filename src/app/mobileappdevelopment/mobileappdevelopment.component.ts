@@ -5,52 +5,45 @@ interface Offering {
   title: string;
   description: string;
 }
+
 @Component({
   selector: 'app-mobileappdevelopment',
   templateUrl: './mobileappdevelopment.component.html',
   styleUrls: ['./mobileappdevelopment.component.css']
 })
 export class MobileappdevelopmentComponent {
-  ecommercedevelopment: Offering[] = [];
- 
+
+  websitedevelopment: Offering[] = [];
+
   constructor() { }
- 
-  // OnInit lifecycle hook to initialize data
+
   ngOnInit(): void {
-    // Populate the computingsoftware array with data
-    this.ecommercedevelopment = [
+    this.websitedevelopment = [
       {
         number: 1,
-        title: 'Custom E-commerce Platforms',
-        description: ': We develop bespoke e-commerce solutions that align with your brand identity and business objectives, whether you are launching a new store or upgrading an existing one.'
+        title: 'Native and Cross-Platform Development',
+        description: 'Custom apps built for iOS, Android, and hybrid solutions that deliver consistent performance across devices.'
       },
       {
         number: 2,
-        title: 'Responsive Design',
-        description: 'Our e-commerce sites are designed to provide an optimal user experience across all devices, ensuring customers can shop effortlessly from desktops, tablets, or mobile phones..'
+        title: 'User-Centered Design',
+        description: 'Intuitive and visually appealing interfaces that prioritize user experience and engagement.'
       },
       {
         number: 3,
-        title: 'Secure Payment Integration',
-        description: 'We implement secure and diverse payment gateways to facilitate smooth transactions, protect customer data, and build trust.'
+        title: 'Scalable and Secure Solutions',
+        description: 'Robust apps built to scale your business while maintaining high-security standards.'
       },
       {
         number: 4,
-        title: ' Inventory Management Systems',
-        description: 'Our solutions include advanced inventory management features that streamline operations and help you efficiently track stock levels and order fulfillment'
+        title: 'Integration with Latest Technologies',
+        description: 'AI, AR/VR, IoT, and more, enabling innovative functionalities to keep you ahead of the competition.'
       },
       {
         number: 5,
-        title: ' SEO-Optimized Frameworks',
-        description: 'We ensure your e-commerce platform is optimized for search engines, enhancing visibility and driving organic traffic to your online store.'
-      },
-      {
-        number: 6,
-        title: 'Analytics and Reporting Tools',
-        description: 'Our integrated analytics tools provide valuable insights into customer behavior, enabling data-driven decisions to optimize your sales strategy.'
+        title: 'App Maintenance & Support',
+        description: 'Ongoing support to ensure your app remains updated, secure, and fully functional.'
       }
     ];
   }
 }
-
-

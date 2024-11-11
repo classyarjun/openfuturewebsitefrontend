@@ -69,6 +69,16 @@ import { NewsComponent } from './news/news.component';
 import { FintechComponent } from './fintech/fintech.component';
 import { AgricultureComponent } from './agriculture/agriculture.component';
 import { RealEstateComponent } from './real-estate/real-estate.component';
+import { FullStackDevelopmentComponent } from './full-stack-development/full-stack-development.component';
+import { ContinuousIntegrationComponent } from './continuous-integration/continuous-integration.component';
+import { ComprehensiveDigitalComponent } from './comprehensive-digital/comprehensive-digital.component';
+import { DataDrivenComponent } from './data-driven/data-driven.component';
+import { ScalableSoftwareComponent } from './scalable-software/scalable-software.component';
+import { BusinessAnalystComponent } from './business-analyst/business-analyst.component';
+import { FraudAlertComponent } from './fraud-alert/fraud-alert.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CarriersComponent } from './carriers/carriers.component';
+import { CareersComponent } from './careers/careers.component';
 
 @NgModule({
   declarations: [
@@ -140,7 +150,17 @@ import { RealEstateComponent } from './real-estate/real-estate.component';
     NewsComponent,
     FintechComponent,
     AgricultureComponent,
-    RealEstateComponent
+    RealEstateComponent,
+    FullStackDevelopmentComponent,
+    ContinuousIntegrationComponent,
+    ComprehensiveDigitalComponent,
+    DataDrivenComponent,
+    ScalableSoftwareComponent,
+    BusinessAnalystComponent,
+    FraudAlertComponent,
+    ContactUsComponent,
+    CarriersComponent,
+    CareersComponent
   ],
   imports: [
     BrowserModule,

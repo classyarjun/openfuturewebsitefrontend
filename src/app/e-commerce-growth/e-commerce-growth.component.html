@@ -1,42 +1,43 @@
 
-<app-navbar></app-navbar>
-<!DOCTYPE html>
-
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Digital Platforms</title>
- 
-</head>
-<body>
     <!-- Header Section -->
-    <header class="header">
+    <div class="header-container">
+        <img src="/assets/solution Background image/E-commerce Growth1.jpg" alt="Header Image" class="header-image" />
+
+        <!-- Centered Content -->
         <div class="header-content">
-            <h1>E-commerce Growth</h1>
-           
+          <h1>E-commerce growth</h1>
+          <p>solutions > E-commerce growth</p>
         </div>
-    </header>
-     <!-- Image and Content Section -->
-     <section class="content-section">
-      <div class="content-container">
-          <div class="content-image">
-              <img src="../../assets/Solution page images/E-Commerce Growth.jpg" alt="seamless user experiance" />
-          </div>
-          <div class="content-text">
-            <h1>E-commerce Growth</h1>
-              <p>E-commerce is an ever-evolving landscape, and at OpenFuture Technology Solutions, we are
+      </div>
+         <!-- Image and Content Section -->
+         <div class="content-container">
+            <!-- Left Side: Split Image with overlay text -->
+            <div class="main-container">
+                <div class="split-image-container">
+                    <div class="split left"></div>
+                    <div class="split right"></div>
+                    <div class="overlay-text">
+                        <h2>E-commerce growth</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Text Content -->
+            <div class="text-container">
+              <h2>E-commerce growth</h2>
+
+
+            <p>E-commerce is an ever-evolving landscape, and at OpenFuture Technology Solutions, we are
                 committed to helping businesses navigate this dynamic environment and achieve sustainable
                 growth. Our e-commerce solutions are designed with scalability in mind, allowing your online
                 business to grow without limitations. We provide comprehensive e-commerce platforms that are
                 user-friendly, secure, and optimized to convert visitors into loyal customers.
-              </p>
-          </div>
-      </div>
-  </section>
- 
+                .</p>
+
+
+            </div>
+            </div>
+
     <!-- Why Us Section -->
     <section class="why-us">
         <h2>Why Us?</h2>
@@ -57,7 +58,7 @@
             </div>
         </div>
     </section>
- 
+
     <!-- Our Offerings Section -->
     <div class="sap-offerings-container">
       <h2 class="sap-heading">WE OFFERINGS</h2>
@@ -65,13 +66,10 @@
           <div class="sap-card" *ngFor="let item of sapOfferings">
               <div class="number-square">{{ item.number }}</div>
               <h4>{{ item.title }}</h4>
-              <div class="info-icon"><span class="material-icons">chevron_right</span></div>
- 
+              <div class="info-icon"><span class="material-icons">></span></div>
+
               <div class="hover-text">{{ item.description }}</div>
           </div>
-      </div>
+      </div>
   </div>
- 
-</body>
-</html>
- 
+

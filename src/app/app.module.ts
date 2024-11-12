@@ -77,8 +77,9 @@ import { ScalableSoftwareComponent } from './scalable-software/scalable-software
 import { BusinessAnalystComponent } from './business-analyst/business-analyst.component';
 import { FraudAlertComponent } from './fraud-alert/fraud-alert.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { CarriersComponent } from './carriers/carriers.component';
 import { CareersComponent } from './careers/careers.component';
+import { JobOpeningComponent } from './job-opening/job-opening.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -134,7 +135,7 @@ import { CareersComponent } from './careers/careers.component';
     GovernmentPublicSectorComponent,
     ComputingSoftwareComponent,
     TestingComponent,
-    
+
     AboutUsComponent,
     OurLeadershipTeamComponent,
     OurClientsComponent,
@@ -159,8 +160,9 @@ import { CareersComponent } from './careers/careers.component';
     BusinessAnalystComponent,
     FraudAlertComponent,
     ContactUsComponent,
-    CarriersComponent,
-    CareersComponent
+    CareersComponent,
+    JobOpeningComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

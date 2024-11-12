@@ -108,7 +108,7 @@
 
 /* Stat Item */
 .stat-item {
-    background-image: url('/src/assets/About Us.jpg'); /* Background image */
+    /* background-image: url('/src/assets/About Us.jpg'); Background image */
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;

@@ -1,6 +1,15 @@
 
 
 
+.btn.btn-dark {
+  color: #ffffff;
+  background: #091d3e;
+  border: none;
+}
+.btn-sm {
+  padding: 8px 18px;
+}
+
 .jobs-form-area {
   border-radius: 3rem;
 }
@@ -179,10 +188,24 @@ img, svg {
   z-index: 1;
   max-width: 550px;
 }
+
 img {
   border: none;
   outline: none;
   max-width: 100%;
+}
+
+@media (max-width: 768px) { /* Adjust width as needed */
+  .mobile-screen-1 img {
+    width: 100%; /* Reduce width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.mobile-screen {
+  max-width: 400px;
+  margin: auto;
+  display: block;
 }
 
 /* ! end second block mobile image css  */
@@ -220,7 +243,6 @@ option {
   padding-inline: 2px;
   white-space: nowrap;
 }
-
 
 /* input icon style */
 .bi-search::before {
@@ -490,10 +512,7 @@ option {
 
 /* ! ========================  find code =========================================*/
 
-
-
 .job-bg {
-
   background-image: url(https://careers.nityo.com/img/nityo-jobs-app/job-bg.png);
   background-size: 100% 100%;
   border-radius: 25px;

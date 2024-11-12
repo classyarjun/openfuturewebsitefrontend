@@ -3,18 +3,18 @@
     padding: 2rem;
     text-align: center; /* Center alignment for content inside */
   }
-  
+
   /* Full-Screen Background Container */
   .background-container {
     background-color: #0c0f44; /* Blue background */
-     background-image: url('../../assets/bg.png'); 
+     background-image: url('../../assets/bg.png');
     height: 95vh; /* Full viewport height */
     width: 96vw; /* Full viewport width */
     padding: 05rem; /* Padding around the content */
     box-sizing: border-box; /* Include padding in the element's total width and height */
     position: relative; /* Positioning context for overlay and content */
   }
-  
+
   /* Title Styles */
   /* Title Styles for "What we offer" */
   /* Title Styles for "What we offer" */
@@ -26,7 +26,7 @@
     font-weight: bold; /* Make the text bold */
     margin-left: 2rem; /* Left margin */
   }
-  
+
   /* Title Styles for "Our Solution" */
   .background-container h1 {
     color: white; /* Text color */
@@ -37,22 +37,22 @@
     font-weight: bold; /* Make the title bold */
     margin-left: 2rem; /* Left margin */
   }
-  
-  
+
+
   /* Slider Styles */
   .service-slider {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
-  
+
   /* Slider List */
   .service-list {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: calc(100% * 1); /* Adjust to reflect the number of slides */
   }
-  
+
   /* Individual Slide */
   .service-slide {
     width: 100%; /* Each slide takes up full width */
@@ -60,7 +60,7 @@
     justify-content: space-around;
     flex-shrink: 0;
   }
-  
+
   /* Service Card */
   /* Service Card */
   .service-card {
@@ -77,62 +77,62 @@
     overflow: hidden; /* Ensure content doesn't overflow */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for card */
   }
-  
-  
+
+
   /* Change the overlay color on hover while keeping the background image */
   .service-card:hover {
     background-color: rgba(7, 8, 46, 0.8); /* Add a semi-transparent overlay effect */
   }
-  
+
   /* Optional: Adjust the image and text on hover */
-  
-  
-  
-  
-  
+
+
+
+
+
   .service-card:hover .text-container h3:nth-of-type(2) {
     color: white; /* Change the description text color to white on hover */
   }
   .service-card:hover .text-container h3 {
     color: white; /* Change the title and description color to white on hover */
   }
-  
-  
+
+
   .service-card:hover .overlay {
     opacity: 0.5; /* Show overlay on hover */
   }
-  
+
   /* Text Container Styles */
   .text-container {
     padding: 1rem; /* Padding for the text container */
     text-align: center; /* Center align text */
     color: rgb(0, 0, 0); /* Change text color to white for better visibility */
   }
-  
+
   /* Title Styles */
   .text-container h3 {
     margin: 4rem 0; /* Add some spacing between title and description */
     font-size: 1.5rem; /* Adjust title font size */
   }
-  
+
   /* Description Styles */
   .text-container h3:nth-of-type(2) {
     font-size: 1rem; /* Adjust description font size */
     opacity: 0.8; /* Slightly transparent for description */
   }
-  
+
   /* Service Info Styles */
   .service-info {
     padding: 1rem; /* Add some padding for spacing */
   }
-  
+
   /* Dots Navigation */
   .slider-dots {
     display: flex;
     justify-content: center;
     margin-top: 2rem; /* Adjust margin as needed */
   }
-  
+
   .slider-dots span {
     display: inline-block;
     width: 15px;
@@ -143,12 +143,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   .slider-dots span.active {
     background-color: #fff; /* Active dot color */
   }
-  
+
   .slider-dots span:hover {
     background-color: #fff; /* Hover color for dots */
   }
-  

@@ -75,6 +75,7 @@ import { BusinessAnalystComponent } from './business-analyst/business-analyst.co
 import { FraudAlertComponent } from './fraud-alert/fraud-alert.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CareersComponent } from './careers/careers.component';
+import { JobOpeningComponent } from './job-opening/job-opening.component';
 
 
 const routes: Routes = [
@@ -157,6 +158,7 @@ const routes: Routes = [
    {path:'fraudalert',component:FraudAlertComponent},
    {path:'contact-us',component:ContactUsComponent},
    {path:'careers',component:CareersComponent},
+   {path:'job-openning',component:JobOpeningComponent},
 
 ];
 

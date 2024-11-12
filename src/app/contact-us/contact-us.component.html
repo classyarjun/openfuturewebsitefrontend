@@ -33,8 +33,8 @@
     <i class="fas fa-envelope"></i> <!-- Icon for email -->
     <div>
       <strong>Official Email</strong>
-      <a><p><p>contact&#64;openfuturetechnologiestechnologies.com</p></a>
-        </div>
+      <p>contact&#64;openfuturetechnologiestechnologies.com</p>
+    </div>
   </div>
 
   <div class="subpoint">
@@ -53,68 +53,117 @@
   </div>
 </div>
 
+<!-- Contact Form Section -->
 <div class="contact-form-container">
-    <div class="contact-form">
-      <h2>Contact Us</h2>
-      <form>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="id">ID</label>
-            <input type="text" id="id" name="id" placeholder="Enter ID" />
-          </div>
-          <div class="form-group">
-            <label for="firstname">First Name</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="lastname">Last Name</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" />
-          </div>
-          <div class="form-group">
-            <label for="country">Country</label>
-            <input type="text" id="country" name="country" placeholder="Enter Country" />
+  <div class="contact-form">
+    <h2 class="mb-3 text-primary">Contact Us</h2>
+    <form (ngSubmit)="submitContactForm(contactForm)" #contactForm="ngForm" novalidate>
+      <!-- Row Layout for First Name and Last Name -->
+      <div class="form-row">
+        <!-- First Name -->
+        <div
+          class="form-group"
+          [ngClass]="{'invalid': contactForm.controls['firstName']?.invalid && contactForm.controls['firstName']?.touched}"
+        >
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" [(ngModel)]="contact.firstName" required />
+          <div
+            *ngIf="contactForm.controls['firstName']?.invalid && contactForm.controls['firstName']?.touched"
+            class="error-message text-danger"
+          >
+            First Name is required.
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="designation">Designation</label>
-            <input type="text" id="designation" name="designation" placeholder="Enter Designation" />
-          </div>
-          <div class="form-group">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Enter Company" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter Email" />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" />
+
+        <!-- Last Name -->
+        <div
+          class="form-group"
+          [ngClass]="{'invalid': contactForm.controls['lastName']?.invalid && contactForm.controls['lastName']?.touched}"
+        >
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" [(ngModel)]="contact.lastName" required />
+          <div
+            *ngIf="contactForm.controls['lastName']?.invalid && contactForm.controls['lastName']?.touched"
+            class="error-message text-danger"
+          >
+            Last Name is required.
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="industry">Industry</label>
-            <input type="text" id="industry" name="industry" placeholder="Enter Industry" />
-          </div>
-          <div class="form-group">
-            <label for="dateCreated">Date Created</label>
-            <input type="date" id="dateCreated" name="dateCreated" />
-          </div>
+      </div>
+
+      <div class="form-row">
+
+      <div [ngClass]="{'invalid': contactForm.controls['designation']?.invalid && contactForm.controls['designation']?.touched}">
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" name="designation" [(ngModel)]="contact.designation" required />
+        <div *ngIf="contactForm.controls['designation']?.invalid && contactForm.controls['designation']?.touched" class="error-message text-danger">
+          Designation is required.
         </div>
-        <div class="form-group-full">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Enter Message"></textarea>
+      </div>
+
+      <!-- Company -->
+      <div [ngClass]="{'invalid': contactForm.controls['company']?.invalid && contactForm.controls['company']?.touched}">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" [(ngModel)]="contact.company" required />
+        <div *ngIf="contactForm.controls['company']?.invalid && contactForm.controls['company']?.touched" class="error-message text-danger">
+          Company is required.
         </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      </div>
+      </div>
+      <div class="form-row">
+
+      <!-- Country -->
+      <div [ngClass]="{'invalid': contactForm.controls['country']?.invalid && contactForm.controls['country']?.touched}">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" [(ngModel)]="contact.country" required />
+        <div *ngIf="contactForm.controls['country']?.invalid && contactForm.controls['country']?.touched" class="error-message text-danger">
+          Country is required.
+        </div>
+      </div>
+
+      <!-- Industry -->
+      <div [ngClass]="{'invalid': contactForm.controls['industry']?.invalid && contactForm.controls['industry']?.touched}">
+        <label for="industry">Industry</label>
+        <input type="text" id="industry" name="industry" [(ngModel)]="contact.industry" required />
+        <div *ngIf="contactForm.controls['industry']?.invalid && contactForm.controls['industry']?.touched" class="error-message text">
+          Industry is required.
+        </div>
+      </div>
+      </div>
+
+      <div class="form-row">
+
+      <!-- Email -->
+      <div [ngClass]="{'invalid': contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched}">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="contact.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <div *ngIf="contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched" class="error-message">
+          Please enter a valid email address.
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div [ngClass]="{'invalid': contactForm.controls['phone']?.invalid && contactForm.controls['phone']?.touched}">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="contact.phone" pattern="^\+?[1-9]\d{1,14}$" />
+        <div *ngIf="contactForm.controls['phone']?.invalid && contactForm.controls['phone']?.touched" class="error-message">
+          Please enter a valid phone number.
+        </div>
+      </div>
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" [(ngModel)]="contact.message"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="contactForm.invalid">Get In Touch</button>
+
+
+
+    </form>
   </div>
-
-
+</div>
 

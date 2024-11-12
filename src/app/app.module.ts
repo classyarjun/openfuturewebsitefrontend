@@ -80,6 +80,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CareersComponent } from './careers/careers.component';
 import { JobOpeningComponent } from './job-opening/job-opening.component';
 import { AdminComponent } from './admin/admin.component';
+import { JobsNavbarComponent } from './jobs-navbar/jobs-navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AdminAllFormsComponent } from './admin-all-forms/admin-all-forms.component';
+import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
+import { AdminNewsComponent } from './admin-news/admin-news.component';
+import { AdminContactsComponent } from './admin-contacts/admin-contacts.component';
 
 @NgModule({
   declarations: [
@@ -162,13 +169,15 @@ import { AdminComponent } from './admin/admin.component';
     ContactUsComponent,
     CareersComponent,
     JobOpeningComponent,
-    AdminComponent
+    AdminComponent,
+    JobsNavbarComponent,
+    AdminAllFormsComponent,
+    AdminBlogsComponent,
+    AdminNewsComponent,
+    AdminContactsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

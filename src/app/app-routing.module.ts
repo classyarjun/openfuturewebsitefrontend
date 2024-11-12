@@ -76,6 +76,11 @@ import { FraudAlertComponent } from './fraud-alert/fraud-alert.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CareersComponent } from './careers/careers.component';
 import { JobOpeningComponent } from './job-opening/job-opening.component';
+import { AdminAllFormsComponent } from './admin-all-forms/admin-all-forms.component';
+import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminContactsComponent } from './admin-contacts/admin-contacts.component';
+import { AdminNewsComponent } from './admin-news/admin-news.component';
 
 
 const routes: Routes = [
@@ -157,8 +162,15 @@ const routes: Routes = [
    {path:'business-analyst',component:BusinessAnalystComponent},
    {path:'fraudalert',component:FraudAlertComponent},
    {path:'contact-us',component:ContactUsComponent},
+
    {path:'careers',component:CareersComponent},
    {path:'job-openning',component:JobOpeningComponent},
+
+   {path:'admin',component:AdminComponent},
+   {path:'admin-all-forms',component:AdminAllFormsComponent},
+   {path:'admin-blogs',component:AdminBlogsComponent},
+   {path:'admin-contacts',component:AdminContactsComponent},
+   {path:'admin-news',component:AdminNewsComponent},
 
 ];
 

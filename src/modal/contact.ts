@@ -9,5 +9,5 @@ export class Contact {
   industry?: string;
   message?: string;
   dateCreated?: string;
-
+  termsConsent: boolean = false;
 }

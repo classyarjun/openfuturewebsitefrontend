@@ -52,6 +52,7 @@
     </div>
   </div>
 </div>
+
 <!-- Contact Form Section -->
 <div class="contact-form-container">
   <div class="contact-form">
@@ -65,7 +66,7 @@
           [ngClass]="{'invalid': contactForm.controls['firstName']?.invalid && contactForm.controls['firstName']?.touched}"
         >
           <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" [(ngModel)]="contact.firstName" required placeholder="First name" />
+          <input type="text" id="firstName" name="firstName" [(ngModel)]="contact.firstName" required />
           <div
             *ngIf="contactForm.controls['firstName']?.invalid && contactForm.controls['firstName']?.touched"
             class="error-message text-danger"
@@ -80,7 +81,7 @@
           [ngClass]="{'invalid': contactForm.controls['lastName']?.invalid && contactForm.controls['lastName']?.touched}"
         >
           <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" [(ngModel)]="contact.lastName" required placeholder="Last Name" />
+          <input type="text" id="lastName" name="lastName" [(ngModel)]="contact.lastName" required />
           <div
             *ngIf="contactForm.controls['lastName']?.invalid && contactForm.controls['lastName']?.touched"
             class="error-message text-danger"
@@ -91,73 +92,78 @@
       </div>
 
       <div class="form-row">
-        <!-- Designation -->
-        <div [ngClass]="{'invalid': contactForm.controls['designation']?.invalid && contactForm.controls['designation']?.touched}">
-          <label for="designation">Designation</label>
-          <input type="text" id="designation" name="designation" [(ngModel)]="contact.designation" required placeholder="Designation" />
-          <div *ngIf="contactForm.controls['designation']?.invalid && contactForm.controls['designation']?.touched" class="error-message text-danger">
-            Designation is required.
-          </div>
-        </div>
-
-        <!-- Company -->
-        <div [ngClass]="{'invalid': contactForm.controls['company']?.invalid && contactForm.controls['company']?.touched}">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" [(ngModel)]="contact.company" required placeholder="Company name" />
-          <div *ngIf="contactForm.controls['company']?.invalid && contactForm.controls['company']?.touched" class="error-message text-danger">
-            Company is required.
-          </div>
+     
+      <div [ngClass]="{'invalid': contactForm.controls['designation']?.invalid && contactForm.controls['designation']?.touched}">
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" name="designation" [(ngModel)]="contact.designation" required />
+        <div *ngIf="contactForm.controls['designation']?.invalid && contactForm.controls['designation']?.touched" class="error-message text-danger">
+          Designation is required.
         </div>
       </div>
 
-      <div class="form-row">
-        <!-- Country -->
-        <div [ngClass]="{'invalid': contactForm.controls['country']?.invalid && contactForm.controls['country']?.touched}">
-          <label for="country">Country</label>
-          <input type="text" id="country" name="country" [(ngModel)]="contact.country" required placeholder="Country" />
-          <div *ngIf="contactForm.controls['country']?.invalid && contactForm.controls['country']?.touched" class="error-message text-danger">
-            Country is required.
-          </div>
+      <!-- Company -->
+      <div [ngClass]="{'invalid': contactForm.controls['company']?.invalid && contactForm.controls['company']?.touched}">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" [(ngModel)]="contact.company" required />
+        <div *ngIf="contactForm.controls['company']?.invalid && contactForm.controls['company']?.touched" class="error-message text-danger">
+          Company is required.
         </div>
+      </div>
+      </div>
+      <div class="form-row">
 
-        <!-- Industry -->
-        <div [ngClass]="{'invalid': contactForm.controls['industry']?.invalid && contactForm.controls['industry']?.touched}">
-          <label for="industry">Industry</label>
-          <input type="text" id="industry" name="industry" [(ngModel)]="contact.industry" required placeholder=" Industry" />
-          <div *ngIf="contactForm.controls['industry']?.invalid && contactForm.controls['industry']?.touched" class="error-message text-danger">
-            Industry is required.
-          </div>
+      <!-- Country -->
+      <div [ngClass]="{'invalid': contactForm.controls['country']?.invalid && contactForm.controls['country']?.touched}">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" [(ngModel)]="contact.country" required />
+        <div *ngIf="contactForm.controls['country']?.invalid && contactForm.controls['country']?.touched" class="error-message text-danger">
+          Country is required.
         </div>
       </div>
 
-      <div class="form-row">
-        <!-- Email -->
-        <div [ngClass]="{'invalid': contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched}">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" [(ngModel)]="contact.email" required placeholder=" Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-          <div *ngIf="contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched" class="error-message text-danger">
-            Please enter a valid email address.
-          </div>
+      <!-- Industry -->
+      <div [ngClass]="{'invalid': contactForm.controls['industry']?.invalid && contactForm.controls['industry']?.touched}">
+        <label for="industry">Industry</label>
+        <input type="text" id="industry" name="industry" [(ngModel)]="contact.industry" required />
+        <div *ngIf="contactForm.controls['industry']?.invalid && contactForm.controls['industry']?.touched" class="error-message text-danger">
+          Industry is required.
         </div>
+      </div>
+      </div>
 
-        <!-- Phone -->
-        <div [ngClass]="{'invalid': contactForm.controls['phone']?.invalid && contactForm.controls['phone']?.touched}">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" [(ngModel)]="contact.phone" placeholder="Phone number" pattern="^\+?[1-9]\d{1,14}$" />
-          <div *ngIf="contactForm.controls['phone']?.invalid && contactForm.controls['phone']?.touched" class="error-message text-danger">
-            Please enter a valid phone number.
-          </div>
+      <div class="form-row">
+
+      <!-- Email -->
+      <div [ngClass]="{'invalid': contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched}">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="contact.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <div *ngIf="contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched" class="error-message text-danger">
+          Please enter a valid email address.
         </div>
+      </div>
+
+      <!-- Phone -->
+      <div [ngClass]="{'invalid': contactForm.controls['phone']?.invalid && contactForm.controls['phone']?.touched}">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="contact.phone" pattern="^\+?[1-9]\d{1,14}$" />
+        <div *ngIf="contactForm.controls['phone']?.invalid && contactForm.controls['phone']?.touched" class="error-message text-danger">
+          Please enter a valid phone number.
+        </div>
+      </div>
       </div>
 
       <!-- Message -->
       <div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" [(ngModel)]="contact.message" placeholder="Enter your message"></textarea>
+        <textarea id="message" name="message" [(ngModel)]="contact.message"></textarea>
       </div>
 
       <!-- Submit Button -->
-      <button type="submit" [disabled]="contactForm.invalid">Get In Touch</button>
+      <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+  
+
+
     </form>
   </div>
 </div>
+

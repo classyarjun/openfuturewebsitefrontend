@@ -1,5 +1,5 @@
-import { ContactService } from './../../service/contact.service';
 import { Component } from '@angular/core';
+import { ContactService } from './../../service/contact.service';
 import { NgForm } from '@angular/forms';
 import { Contact } from 'src/modal/contact';
 

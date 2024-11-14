@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 export class ContactService {
 
-  private apiUrl = 'http://localhost:8080/api/contacts'; // Adjust if needed
+  private apiUrl = 'http://localhost:9090/api/contacts'; // Adjust if needed
 
   constructor(private http: HttpClient) {}
 
@@ -35,7 +35,6 @@ export class ContactService {
       }),
     });
   }
-  
 
   deleteContact(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/Delete/${id}`);

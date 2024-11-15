@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ContactService } from 'src/service/contact.service';
 import { Contact } from 'src/modal/contact';
 
-
 @Component({
   selector: 'app-admin-contacts',
   templateUrl: './admin-contacts.component.html',
@@ -29,7 +28,7 @@ export class AdminContactsComponent implements OnInit {
       }
     );
   }
- 
+
   viewContact(contact: Contact): void {
     this.selectedContact = contact;
   }
@@ -44,3 +43,11 @@ export class AdminContactsComponent implements OnInit {
     );
   }
 }
+
+
+
+
+
+
+
+

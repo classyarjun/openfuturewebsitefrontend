@@ -82,11 +82,12 @@ import { JobOpeningComponent } from './job-opening/job-opening.component';
 import { AdminComponent } from './admin/admin.component';
 import { JobsNavbarComponent } from './jobs-navbar/jobs-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminAllFormsComponent } from './admin-all-forms/admin-all-forms.component';
 import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
 import { AdminNewsComponent } from './admin-news/admin-news.component';
 import { AdminContactsComponent } from './admin-contacts/admin-contacts.component';
+import { ApplyComponent } from './apply/apply.component';
 
 @NgModule({
   declarations: [
@@ -175,8 +176,9 @@ import { AdminContactsComponent } from './admin-contacts/admin-contacts.componen
     AdminBlogsComponent,
     AdminNewsComponent,
     AdminContactsComponent,
+    ApplyComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

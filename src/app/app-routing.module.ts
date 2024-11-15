@@ -81,6 +81,7 @@ import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminContactsComponent } from './admin-contacts/admin-contacts.component';
 import { AdminNewsComponent } from './admin-news/admin-news.component';
+import { ApplyComponent } from './apply/apply.component';
 
 
 const routes: Routes = [
@@ -142,8 +143,6 @@ const routes: Routes = [
    {path:'safe-shore-methodology',component:SafeShoreMethodologyComponent},
    {path:'our-leadership',component:OurLeadershipTeamComponent},
 
-
-
    {path:'ecommerce',component:ECommerceComponent},
    {path:'banking',component:BankingComponent},
    {path:'agriculture',component:AgricultureComponent},
@@ -171,6 +170,7 @@ const routes: Routes = [
    {path:'admin-blogs',component:AdminBlogsComponent},
    {path:'admin-contacts',component:AdminContactsComponent},
    {path:'admin-news',component:AdminNewsComponent},
+   {path:'apply',component:ApplyComponent},
 
 ];
 

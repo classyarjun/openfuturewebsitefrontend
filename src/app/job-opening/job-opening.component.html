@@ -8,6 +8,7 @@
   <div class="tech-mesh-offering-top">&nbsp;</div>
   <div class="tech-mesh-offering-bottom">&nbsp;</div>
   <div class="container py-md-5 py-4 position-relative z-index-3">
+
     <div class="row mb-4 mt-3">
       <div class="col text-center"></div>
     </div>
@@ -60,12 +61,13 @@
                 <div class="accordion-body">
 
                   <div *ngFor="let role of (showMore ? roles : roles | slice:0:2)" class="form-check d-flex mb-2">
-                    <input type="checkbox" [id]="role.id + 'depart'" class="form-check-input me-2 p-2" [value]="role.id" />
+                    <input type="checkbox" [id]="role.id + 'depart'" class="form-check-input me-2 p-2"
+                      [value]="role.id" />
                     <label [for]="role.id + 'depart'" class="form-check-label mb-0 small text-break">
                       {{ role.name }}
                     </label>
                   </div>
-                  <a  (click)="toggleShowMore()" class="text-gradient small ms-4">
+                  <a (click)="toggleShowMore()" class="text-gradient small ms-4">
                     {{ showMore ? 'View Less' : 'View More' }}
                   </a>
                 </div>
@@ -119,8 +121,10 @@
                 <div class="accordion-body">
 
 
-                  <div *ngFor="let location of (showMoreLocations ? locations : locations | slice:0:2)" class="form-check d-flex mb-2">
-                    <input type="checkbox" [id]="location.id + 'loc'" class="form-check-input me-2 p-2" [value]="location.id" />
+                  <div *ngFor="let location of (showMoreLocations ? locations : locations | slice:0:2)"
+                    class="form-check d-flex mb-2">
+                    <input type="checkbox" [id]="location.id + 'loc'" class="form-check-input me-2 p-2"
+                      [value]="location.id" />
                     <label [for]="location.id + 'loc'" class="form-check-label mb-0 small">
                       {{ location.name }}
                     </label>
@@ -135,7 +139,8 @@
             </div>
 
             <!-- ! Salery Section Accordian  -->
-             <div class="accordion-item">
+
+            <div class="accordion-item">
               <h2 class="accordion-header">
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#salary"
                   class="accordion-button bg-transparent">
@@ -173,7 +178,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -184,15 +188,13 @@
             <!---->
             <span class="fw-bold"> </span>
           </div>
-          <div class="col-md-auto mb-3 mt-0">
+
+          <!-- <div class="col-md-auto mb-3 mt-0">
             <ul class="pagination">
-              <!---->
-              <!---->
+
               <li class="active"><a href="#">1</a></li>
               <li class=""><a href="#">2</a></li>
               <li class=""><a href="#">3</a></li>
-              <li class=""><a href="#">4</a></li>
-              <li class=""><a href="#">5</a></li>
               <li>
                 <a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
               </li>
@@ -200,10 +202,9 @@
                 <a href="#" aria-label="Last"><span aria-hidden="true">Last</span></a>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
         <div class="row">
-
           <!-- <div class="col-md-auto mb-3 ms-auto">
             <a href="#" class="text-primary">Send me jobs like these</a>
           </div> -->
@@ -225,7 +226,8 @@
             <div class="shadow-md z-index-2 position-relative p-md-4 p-3 jd-list-block">
               <div class="row">
                 <div class="col">
-                  <a href="#" class="fw-medium mb-2 text-decoration-none"><span class="fs-3">Frontend Developer</span></a>
+                  <a href="#" class="fw-medium mb-2 text-decoration-none"><span class="fs-3">Frontend
+                      Developer</span></a>
                 </div>
               </div>
 
@@ -322,15 +324,13 @@
 
         </div>
 
-
-        <div class="row align-items-center justify-content-md-between">
+        <!-- Pagination -->
+        <!-- <div class="row align-items-center justify-content-md-between">
           <div class="col-md-auto mb-3 mt-0 ms-auto">
             <ul class="pagination mt-0">
               <li class="active"><a href="#">1</a></li>
               <li class=""><a href="#">2</a></li>
               <li class=""><a href="#">3</a></li>
-              <li class=""><a href="#">4</a></li>
-              <li class=""><a href="#">5</a></li>
               <li>
                 <a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
               </li>
@@ -339,7 +339,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

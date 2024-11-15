@@ -8,3 +8,5 @@ export class Job {
   experience: string = '';
   salary: string = '';
 }
+
+

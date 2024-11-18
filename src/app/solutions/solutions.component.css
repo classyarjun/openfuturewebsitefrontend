@@ -1,153 +1,192 @@
-/* Main container for the services section */
-.our-services {
-    padding: 2rem;
-    text-align: center; /* Center alignment for content inside */
+/* Base Styles */
+.solutions-slider-container {
+
+
+  padding: 40px; /* Increase the padding to give more space inside */
+  text-align: left; /* Align content to the left */
+  background-image: url('src/assets/bg.png'); /* Replace with your image path */
+  background-color: #0a0e27; /* dark blue background */
+  color: #fff;
+  min-height: 500px; /* Set a minimum height for the container */
+}
+
+.section-title {
+  font-size: 1.2rem; /* Smaller font size */
+  color: #fff;
+
+  margin-left: 10%; /* Keep left margin */
+}
+
+.section-subtitle {
+  font-size: 5rem; /* Larger font size */
+  color: #e0e0e0;
+
+  margin-left: 10%; /* Keep left margin */
+}
+
+/* The rest of your styles remain unchanged */
+
+.slider {
+  display: flex;
+  gap: 50px;
+ margin-left: 15%;
+
+  padding: 10px;
+
+}
+
+.card {
+  flex: 1 1 20%;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  max-width: 250px;
+  scroll-snap-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0a0e27;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.read-more-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0a0e27;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #333;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  background: none;
+  border: none;
+  color: #0a1c35;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+/* Slider Dots */
+.slider-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 1 25%; /* 4 cards per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 33.33%; /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 50%; /* 2 cards per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 1 1 100%; /* 1 card per row */
   }
 
-  /* Full-Screen Background Container */
-  .background-container {
-    background-color: #0c0f44; /* Blue background */
-     background-image: url('../../assets/bg.png');
-    height: 95vh; /* Full viewport height */
-    width: 96vw; /* Full viewport width */
-    padding: 05rem; /* Padding around the content */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    position: relative; /* Positioning context for overlay and content */
+  .nav-btn {
+    font-size: 1.5rem;
   }
 
-  /* Title Styles */
-  /* Title Styles for "What we offer" */
-  /* Title Styles for "What we offer" */
-  .background-container p {
-    color: white; /* Text color */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    text-align: left; /* Align text to the left */
-    margin-bottom: 0.5rem; /* Reduced space below the text */
-    font-weight: bold; /* Make the text bold */
-    margin-left: 2rem; /* Left margin */
+  .section-title {
+    font-size: 1.5rem;
   }
 
-  /* Title Styles for "Our Solution" */
-  .background-container h1 {
-    color: white; /* Text color */
-    font-size: 3.5rem; /* Increased font size */
-    text-align: left; /* Align text to the left */
-    margin-top: 0rem; /* Remove the margin above the h1 tag */
-    margin-bottom: 1rem; /* Adjust space below the title */
-    font-weight: bold; /* Make the title bold */
-    margin-left: 2rem; /* Left margin */
+  .section-subtitle {
+    font-size: 1.2rem;
   }
+}
+/* Slider Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  /* Slider Styles */
-  .service-slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
+.dot.active {
+  background-color: #717171; /* Active dot color */
+}
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 
-  /* Slider List */
-  .service-list {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: calc(100% * 1); /* Adjust to reflect the number of slides */
-  }
+.slider-dots span {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  /* Individual Slide */
-  .service-slide {
-    width: 100%; /* Each slide takes up full width */
-    display: flex;
-    justify-content: space-around;
-    flex-shrink: 0;
-  }
+.slider-dots span.active {
+  background-color: #4CAF50;
+}
 
-  /* Service Card */
-  /* Service Card */
-  .service-card {
-    background-color: rgba(255, 255, 255, 0.8); /* White background (with slight transparency) */
-    background-size: cover; /* Ensure the image covers the entire card */
-    background-position: center; /* Center the image in the card */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    color: #000000; /* Black text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 30%; /* Adjust this to change the width of the service cards */
-    height: 400px; /* Increased card height */
-    margin: 0 10px; /* Horizontal margins between cards */
-    overflow: hidden; /* Ensure content doesn't overflow */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for card */
-  }
-
-
-  /* Change the overlay color on hover while keeping the background image */
-  .service-card:hover {
-    background-color: rgba(7, 8, 46, 0.8); /* Add a semi-transparent overlay effect */
-  }
-
-  /* Optional: Adjust the image and text on hover */
-
-
-
-
-
-  .service-card:hover .text-container h3:nth-of-type(2) {
-    color: white; /* Change the description text color to white on hover */
-  }
-  .service-card:hover .text-container h3 {
-    color: white; /* Change the title and description color to white on hover */
-  }
-
-
-  .service-card:hover .overlay {
-    opacity: 0.5; /* Show overlay on hover */
-  }
-
-  /* Text Container Styles */
-  .text-container {
-    padding: 1rem; /* Padding for the text container */
-    text-align: center; /* Center align text */
-    color: rgb(0, 0, 0); /* Change text color to white for better visibility */
-  }
-
-  /* Title Styles */
-  .text-container h3 {
-    margin: 4rem 0; /* Add some spacing between title and description */
-    font-size: 1.5rem; /* Adjust title font size */
-  }
-
-  /* Description Styles */
-  .text-container h3:nth-of-type(2) {
-    font-size: 1rem; /* Adjust description font size */
-    opacity: 0.8; /* Slightly transparent for description */
-  }
-
-  /* Service Info Styles */
-  .service-info {
-    padding: 1rem; /* Add some padding for spacing */
-  }
-
-  /* Dots Navigation */
-  .slider-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem; /* Adjust margin as needed */
-  }
-
-  .slider-dots span {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .slider-dots span.active {
-    background-color: #fff; /* Active dot color */
-  }
-
-  .slider-dots span:hover {
-    background-color: #fff; /* Hover color for dots */
-  }

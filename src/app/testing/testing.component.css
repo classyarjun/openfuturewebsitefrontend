@@ -1,0 +1,19 @@
+.archive-blog-wrapper.three-blog .blog-link, .archive-blog-wrapper.all-blogs .blog-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .archive-blog-wrapper.three-blog {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+.archive-blog-wrapper.three-blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}

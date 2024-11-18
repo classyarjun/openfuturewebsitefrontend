@@ -10,6 +10,7 @@ declare var bootstrap: any;
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
 })
+
 export class AdminComponent implements OnInit {
   jobs: Job[] = [];
   newJob: Job = new Job();

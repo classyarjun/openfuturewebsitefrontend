@@ -1,326 +1,197 @@
 /* Reset default styles for better control */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Prevents padding and border from affecting element's total width/height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body and HTML styles */
 html, body {
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    font-family: 'Poppins', sans-serif; /* Set a default font */
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+/* Social Media Icon Styling */
+.social-media a {
+  color: white; /* Set icon color to white */
+  font-size: 30px; /* Adjust the size of the icon */
+  margin-right: 10px; /* Add margin between icons */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Hero Section Layout */
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5vh 5%;
-    background-image: url('/assets/images/your tech trans_n bg image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-}
-
-/* Left Side Heading */
-.left-side {
-    flex: 1;
-    padding-right: 2rem; /* Space on desktop between left and right */
-}
-
-/* Gradient Effect for 'Tech Transformation' */
-.gradient-text {
-    background: linear-gradient(90deg, #1A57D6, #30D8FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 700;
-}
-
-/* Right Side (Contact Info) */
-.right-side {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.connect-button {
-    padding: 15px 30px; /* Optimal padding */
-    font-size: 1.2rem; /* Adjusted font size for readability */
-    background: linear-gradient(90deg, #30D8FF, #007bff); /* Initial gradient background */
-    color: white; /* Text color */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px; /* Make it rectangular with slightly rounded edges */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    position: relative; /* Position relative for pseudo-element */
-    overflow: hidden; /* Hide overflow */
-    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
-}
-
-.connect-button::before {
-    content: ''; /* Create a pseudo-element */
-    position: absolute; /* Position it absolutely */
-    top: 0;
-    left: 0;
-    right: 100%; /* Start off-screen */
-    bottom: 0;
-    background: #012c5a; /* Dark blue background */
-    transition: right 0.5s ease; /* Transition effect */
-    z-index: 0; /* Place behind the text */
-}
-
-.connect-button:hover::before {
-    right: 0; /* Fill the button on hover */
-}
-
-.connect-button:hover {
-    color: white; /* Ensure text color remains white */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
-    z-index: 1; /* Ensure text is on top */
-}
-
-.connect-button span {
-    position: relative; /* Position text on top of pseudo-element */
-    z-index: 1; /* Ensure text is above the fill effect */
-}
-
-/* Responsive for smaller screens (mobile/tablet) */
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center the content */
-        text-align: center; /* Center the text */
-        padding: 5vh 2%; /* Reduced padding for mobile */
-        height: auto; /* Allow auto height for better spacing */
-    }
-
-    .left-side {
-        padding-right: 0; /* Remove right padding for mobile view */
-        width: 100%; /* Ensure full width for mobile */
-        margin-bottom: 20px; /* Space between sections */
-    }
-
-    .right-side {
-        justify-content: center; /* Center the button */
-        width: 100%; /* Ensure full width */
-        margin-top: 20px; /* Add margin for spacing */
-    }
-
-    .connect-button {
-        font-size: 1rem; /* Smaller font for mobile */
-        padding: 12px 25px; /* Adjust padding for mobile */
-        border-radius: 30px; /* Smaller border radius for mobile */
-    }
-
-    /* Hide Solutions and Services sections on mobile */
-    .solutions-section,
-    .services-section {
-        display: none; /* Hide sections on mobile view */
-    }
+/* Hover Effect for Social Media Icons */
+.social-media a:hover {
+  color: #ccc; /* Change color on hover, you can adjust the color to your preference */
 }
 
 /* Base Footer Styling */
 .footer {
-    padding: 5vh 2%;
-    color: white;
-    background-image: url('../../assets/footer bg.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%; /* Ensure full width */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    font-family: 'Raleway', sans-serif; /* Set Raleway font for the footer */
+  padding: 5vh 2%;
+  color: white;
+  background-image: url('../../assets/footer bg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Footer Section */
 .footer-section {
-    display: flex; /* Align items in a single line */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 2vh 2%; /* Padding for the section */
-    color: white; /* Text color */
-    background-color: #000; /* Background color (adjust as needed) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2%;
+  color: white;
+  background-color: #000;
 }
 
 /* Footer Links and Copyright */
 .copyright {
-    font-size: 0.8rem; /* Smaller font size for copyright */
-    margin-right: 20px; /* Space between copyright and links */
+  font-size: 0.8rem;
+  margin-right: 20px;
 }
 
 .footer-links {
-    display: flex; /* Align links in a row */
-    list-style-type: none; /* Remove bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    flex-wrap: wrap; /* Allow links to wrap on small screens */
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center; /* Center footer links */
 }
 
 .footer-links li {
-    margin-right: 15px; /* Space between links */
+  margin-right: 15px;
 }
 
 .footer-links a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Link color */
-    font-size: 0.9rem; /* Font size for links */
-    font-weight: bold; /* Make the links bold */
-    transition: text-decoration 0.3s; /* Smooth transition for underline */
-    white-space: nowrap; /* Prevent line breaks */
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: text-decoration 0.3s;
+  white-space: nowrap;
 }
 
 .footer-links a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .footer-section {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center items */
-        text-align: center; /* Center text */
-        padding: 10px; /* Reduce padding on smaller screens */
-    }
-
-    .footer-links {
-        margin-top: 10px; /* Space above links */
-    }
-
-    .copyright {
-        margin-right: 0; /* Remove margin on smaller screens */
-    }
-
-    .footer-links {
-        justify-content: center; /* Center the links on mobile */
-    }
+  text-decoration: underline;
 }
 
 /* Footer Container */
 .footer-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    max-width: 1200px; /* Limit the max width for larger screens */
-    margin: 0 auto; /* Center the footer content */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Logo Section */
 .logo-section img {
-    width: 100px; /* Responsive logo size */
-    margin-bottom: 10px; /* Space below logo */
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 /* Headings */
 h3 {
-    margin-bottom: 10px;
-    font-size: 18px; /* Default heading size */
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 /* List Styles */
 ul {
-    list-style-type: none;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    margin-bottom: 5px; /* Space between list items */
+  margin-bottom: 0px;
 }
 
 /* Link Styles */
 li a {
-    text-decoration: none; /* No underline by default */
-    color: white; /* White color for links */
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Hides overflowing text */
-    text-overflow: ellipsis; /* Adds ellipsis if text is too long */
-    display: inline-block; /* Ensure the link is treated as a block for positioning */
-    position: relative; /* Positioning for the link */
-    transition: transform 0.3s ease; /* Smooth transition for movement */
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
 /* Hover Effect */
 li a:hover {
-    transform: translateX(5px); /* Move text slightly to the right on hover */
-    color: white; /* Optional: Change color on hover for better visibility */
+  transform: translateX(5px);
+  color: white;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  /* Adjust footer-container for medium-sized screens */
+  .footer-container {
+      grid-template-columns: repeat(3, 1fr); /* Three columns on medium screens */
+  }
+
+  /* Stack logo-section and footer-links vertically */
+  .footer-section {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
 @media (max-width: 768px) {
-    .services-columns {
-        grid-template-columns: 1fr; /* Stack columns on small screens */
-    }
+  /* Stack items vertically on small screens */
+  .footer-container {
+      grid-template-columns: 1fr; /* Single column layout on small screens */
+      padding: 1vh 0;
+  }
+
+  /* Center footer section and copyright */
+  .footer-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-links {
+      justify-content: center;
+      margin-top: 30px;
+  }
+
+  /* Adjust links for small screens */
+  .footer-links li {
+      margin-bottom: 10px;
+  }
+
+  /* Reduce font size for copyright */
+  .copyright {
+      margin-right: 0;
+      font-size: 0.75rem;
+  }
+
+  /* Adjust the social media icons */
+  .social-media a {
+      font-size: 25px; /* Slightly smaller icons for small screens */
+      margin-right: 10px;
+  }
 }
 
-/* Services Section */
-.services-section {
-    padding: 0px; /* Add padding if needed */
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .footer-container {
+      padding: 2vh 1vw;
+  }
+
+  .footer-links a {
+      font-size: 0.8rem; /* Adjust link size for very small screens */
+  }
+
+  /* Social media icon size adjustment */
+  .social-media a {
+      font-size: 40px;
+  }
 }
 
-/* Columns for services */
-.services-columns {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 20px; /* Space between the columns */
-}
-
-/* Individual Service List */
-.services-list {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-}
-
-/* Service Links */
-.services-list li {
-    margin-bottom: 10px; /* Space between items */
-}
-
-.services-list a {
-    text-decoration: none; /* No underline on links */
-    color: inherit; /* Inherit color from parent */
-    transition: color 0.3s; /* Smooth color change */
-}
-
-.services-list a:hover {
-    color: #007bff; /* Change color on hover */
-}
-
-/* Solutions Section */
-.solutions-section {
-    padding: 0px; /* Add padding if needed */
-}
-
-/* Solutions Columns */
-.solutions-columns {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 20px; /* Space between the columns */
-}
-
-
-
-.social-media a {
-  font-size: 30px; /* Icon size */
-  color: #ffffff; /* Default icon color */
-  margin-right: 15px;
-  text-decoration: none;
-}
-
-.social-media a:hover {
-  color: #0077b5; /* LinkedIn hover color */
-}
-
-.social-media a:nth-child(2):hover {
-  color: #E1306C; /* Instagram hover color */
-}
-
-.social-media a:nth-child(3):hover {
-  color: #1877F2; /* Facebook hover color */
-}
-
-.social-media a:nth-child(4):hover {
-  color: #FF0000; /* YouTube hover color */
-}

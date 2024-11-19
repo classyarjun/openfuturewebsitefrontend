@@ -20,26 +20,9 @@ export class AdminComponent implements OnInit {
   @ViewChild('deleteModal') deleteModal!: ElementRef; // Reference to the delete modal
 
   constructor(private jobService: JobService) {}
-  admin: any = null;
-  error: string | null = null;
 
   ngOnInit(): void {
     this.loadJobs();
-      const apiUrl = 'http://localhost:9090/api/admin/getAdminById/2';
-      fetch(apiUrl)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('API request failed with status ' + response.status);
-          }
-          return response.json();
-        })
-        .then((data) => {
-          this.admin = data;
-          console.log(data); // Admin data ko set karna
-        })
-        .catch((err) => {
-          this.error = err.message; // Error handle karna
-        });
   }
 
   loadJobs(): void {
@@ -118,7 +101,3 @@ export class AdminComponent implements OnInit {
     }
   }
 }
-
-
-
-

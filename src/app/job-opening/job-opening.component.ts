@@ -1,38 +1,58 @@
-import { Component } from '@angular/core';
+import { JobService } from './../../service/job.service';
+import { Component, OnInit } from '@angular/core';
 import { Job } from 'src/modal/job';
-import { JobService } from 'src/service/job.service';
 
 @Component({
   selector: 'app-job-opening',
   templateUrl: './job-opening.component.html',
   styleUrls: ['./job-opening.component.css']
 })
-export class JobOpeningComponent {
-
-
+export class JobOpeningComponent implements OnInit {
   jobs: Job[] = [];
   filteredJobs: Job[] = [];
   currentJobs: Job[] = [];
-  filters = {
-    remote: false,
-    hybrid: false,
-    office: false,
-    experience: '', // e.g., '0-2 years'
-    salary: ''      // e.g., '1' for 1-3 LPA
-  };
   currentPage = 1;
   totalPages = 1;
   pageSize = 5;
   pages: number[] = [];
 
-  constructor(private jobService: JobService) {}
+  filters: Record<string, any> = {
+    remote: false,
+    hybrid: false,
+    office: false,
+    experience: '',
+    salary: ''
+  };
+
+  workModes = [
+    { value: 'remote', label: 'Remote' },
+    { value: 'hybrid', label: 'Hybrid' },
+    { value: 'office', label: 'Work from Office' }
+  ];
+
+  experiences = [
+    { value: '0-1', label: '0-1 years' },
+    { value: '2-3', label: '2-3 years' },
+    { value: '4-5', label: '4-5 years' },
+    { value: '6-7', label: '6-7 years' },
+    { value: '8-9', label: '8-9 years' }
+  ];
+
+  salaries = [
+    { value: '1', label: '1-2 LPA' },
+    { value: '2', label: '3-5 LPA' },
+    { value: '3', label: '6-7 LPA' },
+    { value: '4', label: '8-9 LPA' }
+  ];
+
+  constructor(private JobService: JobService) {}
 
   ngOnInit(): void {
     this.getJobs();
   }
 
   getJobs(): void {
-    this.jobService.getJobs().subscribe((data: Job[]) => {
+    this.JobService.getJobs().subscribe((data: Job[]) => {
       this.jobs = data;
       this.applyFilters();
     });
@@ -48,84 +68,66 @@ export class JobOpeningComponent {
   }
 
   filterByWorkModel(job: Job): boolean {
-    const workModel = job.workModel.toLowerCase();
-    if (this.filters.remote) return workModel === 'remote';
-    if (this.filters.hybrid) return workModel === 'hybrid';
-    if (this.filters.office) return workModel === 'work from office';
-
-    // If no filter is selected, include all jobs
-    return true;
+    if (this.filters['remote'] && job.workModel.toLowerCase() === 'remote') return true;
+    if (this.filters['hybrid'] && job.workModel.toLowerCase() === 'hybrid') return true;
+    if (this.filters['office'] && job.workModel.toLowerCase() === 'work from office') return true;
+    return !this.filters['remote'] && !this.filters['hybrid'] && !this.filters['office'];
   }
 
   filterByExperience(job: Job): boolean {
-    if (!this.filters.experience) return true;
-
-    const [minExp, maxExp] = this.filters.experience.split('-').map(str => parseInt(str, 10));
-    const jobExp = this.parseExperience(job.experience);
-    return jobExp >= minExp && (!maxExp || jobExp <= maxExp);
-  }
-
-  parseExperience(experience: string): number {
-    // Extract numerical years from experience string (e.g., "2-3 years")
-    const match = experience.match(/(\d+)/);
-    return match ? parseInt(match[1], 10) : 0;
+    if (!this.filters['experience']) return true;
+    const [min, max] = this.filters['experience'].split('-').map(Number);
+    const exp = this.parseExperience(job.experience);
+    return exp >= min && (!max || exp <= max);
   }
 
   filterBySalary(job: Job): boolean {
-    if (!this.filters.salary) return true; // If no salary filter is selected, include all jobs.
+    if (!this.filters['salary']) return true;
 
-    const salaryRanges: Record<string, [number, number]> = {
-        '1': [100000, 300000],  // 1-3 LPA
-        '2': [300000, 500000],  // 3-5 LPA
-        '3': [500000, 700000],  // 5-7 LPA
-        '4': [700000, 800000]   // 7-8 LPA
+    const salaryRanges: { [key: string]: number[] } = {
+      '1': [100000, 200000],
+      '2': [300000, 500000],
+      '3': [600000, 700000],
+      '4': [800000, 900000]
     };
 
-    const [minSalary, maxSalary] = salaryRanges[this.filters.salary] || [0, Infinity];
-    const jobSalary = this.parseSalary(job.salary);
-    return jobSalary >= minSalary && jobSalary <= maxSalary;
-}
+    const [min, max] = salaryRanges[this.filters['salary']];
+    const salary = this.parseSalary(job.salary);
+    return salary >= min && salary <= max;
+  }
 
-
-
-
-// Called when a salary filter checkbox is clicked
-toggleSalaryFilter(value: string): void {
-    // If already selected, deselect it by setting the filter to an empty string.
-    this.filters.salary = this.filters.salary === value ? '' : value;
-
-    // Reapply filters.
-    this.applyFilters();
-}
-
+  parseExperience(exp: string): number {
+    const match = exp.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
+  }
 
   parseSalary(salary: string): number {
-    // Parse salary strings like "5-7 lakhs" to numeric (e.g., 700000)
-    const match = salary.match(/(\d+)/g);
-    if (match && match.length > 0) {
-      return parseInt(match[match.length - 1], 10) * 100000; // Assume 'lakhs' as unit
-    }
-    return 0;
+    const match = salary.match(/\d+/g);
+    return match ? parseInt(match[match.length - 1]) * 100000 : 0;
   }
 
   updatePagination(): void {
     this.totalPages = Math.ceil(this.filteredJobs.length / this.pageSize);
     this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
-
-    if (this.currentPage > this.totalPages) {
-      this.currentPage = 1;
-    }
-
-    this.changePage(this.currentPage);
+    this.changePage(this.currentPage > this.totalPages ? 1 : this.currentPage);
   }
 
   changePage(page: number): void {
-    if (page < 1 || page > this.totalPages) return;
-
     this.currentPage = page;
     const start = (page - 1) * this.pageSize;
     const end = start + this.pageSize;
-
     this.currentJobs = this.filteredJobs.slice(start, end);
   }
+
+  resetFilters() {
+    this.filters = {
+      remote: false,
+      hybrid: false,
+      office: false,
+      experience: null,
+      salary: null,
+    };
+    this.applyFilters();  // Re-apply filters after resetting them
+  }
+
 }

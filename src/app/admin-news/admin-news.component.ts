@@ -15,7 +15,7 @@ export class AdminNewsComponent implements OnInit {
   news: News = {
     newsTitle: '',
     newsContent: '',
-    admin: { id: 0 },
+    admin: { id: 1 },
   };
   newsList: News[] = [];
   newsToDelete: News | null = null;

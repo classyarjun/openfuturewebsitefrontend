@@ -1,7 +1,7 @@
-<div class="service-intro">
-    <h2>Our Services</h2>
+<div class="service-intro py-4">
+    <h2 class="fw-bold">Our Services</h2>
   </div>
-   
+
   <div class="service-slider" *ngIf="isSliderVisible">
     <div class="service-list" [style.transform]="getTransform()">
       <div class="service-slide" *ngFor="let group of serviceGroups">
@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-   
+
   <div class="slider-dots">
     <span
       *ngFor="let group of serviceGroups; let i = index"
@@ -28,4 +28,3 @@
     >
     </span>
   </div>
-   

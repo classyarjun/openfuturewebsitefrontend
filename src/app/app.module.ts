@@ -1,6 +1,7 @@
+
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SolutionsComponent } from './solutions/solutions.component';
@@ -82,12 +83,19 @@ import { JobOpeningComponent } from './job-opening/job-opening.component';
 import { AdminComponent } from './admin/admin.component';
 import { JobsNavbarComponent } from './jobs-navbar/jobs-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AdminAllFormsComponent } from './admin-all-forms/admin-all-forms.component';
 import { AdminBlogsComponent } from './admin-blogs/admin-blogs.component';
 import { AdminNewsComponent } from './admin-news/admin-news.component';
 import { AdminContactsComponent } from './admin-contacts/admin-contacts.component';
 import { ApplyComponent } from './apply/apply.component';
+import { FrontNewsComponent } from './front-news/front-news.component';
+import { FrontBlogsComponent } from './front-blogs/front-blogs.component';
+import { AdminService } from 'src/service/admin.service';
+
+import { AdminregisterComponent } from './adminregister/adminregister.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -177,9 +185,13 @@ import { ApplyComponent } from './apply/apply.component';
     AdminNewsComponent,
     AdminContactsComponent,
     ApplyComponent,
+    FrontNewsComponent,
+    FrontBlogsComponent,
+    AdminregisterComponent,
+    LoginComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule,ReactiveFormsModule],
+  providers: [AdminService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

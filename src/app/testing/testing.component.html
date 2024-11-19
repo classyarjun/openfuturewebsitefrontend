@@ -1,104 +1,29 @@
-<div id="primary" class="wrapper">
-  <main id="main" class="site-main" role="main">
-    <div class="archive-blog-wrapper three-blog">
-      <article id="post-39">
-        <div class="post-wrapper">
-          <div class="featured-imag">
-            <a href="https://blog.nityo.com/?p=39"><img
-                src="https://blog.nityo.com/wp-content/uploads/2023/01/blog-4-1-1.jpg"
-                alt="how-to-digitalize-customer-experience"></a>
-          </div>
-
-          <div class="entry-container">
-            <div class="blog-overlay-content"><a class="blog-link"
-                href="https://blog.nityo.com/how-to-digitalize-customer-experience/"></a>
-              <div class="entry-content">
-                <p>How To Digitalize Customer Experiences?</p><a class="btn-line">Read More</a>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article id="post-36">
-        <div class="post-wrapper">
-          <div class="featured-imag">
-            <a href="https://blog.nityo.com/?p=36"><img
-                src="https://blog.nityo.com/wp-content/uploads/2023/01/blog-9-1.jpg"
-                alt="what-are-the-3rs-of-digital-transformation"></a>
-          </div>
-
-          <div class="entry-container">
-            <div class="blog-overlay-content"><a class="blog-link"
-                href="https://blog.nityo.com/what-are-the-3rs-of-digital-transformation/"></a>
-              <div class="entry-content">
-                <p>What Are The 3Rs of Digital Transformation?</p><a class="btn-line">Read More</a>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article id="post-33">
-        <div class="post-wrapper">
-          <div class="featured-imag">
-            <a href="https://blog.nityo.com/?p=33"><img
-                src="https://blog.nityo.com/wp-content/uploads/2023/01/blog-5-1.jpg"
-                alt="how-can-smes-leverage-the-unexplored-power-of-artificial-intelligence-ai"></a>
-          </div>
-
-          <div class="entry-container">
-            <div class="blog-overlay-content"><a class="blog-link"
-                href="https://blog.nityo.com/how-can-smes-leverage-the-unexplored-power-of-artificial-intelligence-ai/"></a>
-              <div class="entry-content">
-                <p>How can SMEs Leverage The Unexplored Power of Artificial Intelligence (AI)?</p><a
-                  class="btn-line">Read More</a>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article id="post-30">
-        <div class="post-wrapper">
-          <div class="featured-imag">
-            <a href="https://blog.nityo.com/?p=30"><img
-                src="https://blog.nityo.com/wp-content/uploads/2023/01/blog-7-1.jpg"
-                alt="how-can-companies-reduce-their-costs-by-outsourcing-employees"></a>
-          </div>
-
-          <div class="entry-container">
-            <div class="blog-overlay-content"><a class="blog-link"
-                href="https://blog.nityo.com/how-can-companies-reduce-their-costs-by-outsourcing-employees/"></a>
-              <div class="entry-content">
-                <p>How Can Companies Reduce Their Costs by Outsourcing Employees?</p><a class="btn-line">Read More</a>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article id="post-27">
-        <div class="post-wrapper">
-          <div class="featured-imag">
-            <a href="https://blog.nityo.com/?p=27"><img
-                src="https://blog.nityo.com/wp-content/uploads/2023/01/blog-6-1.jpg"
-                alt="what-are-the-most-common-challenges-faced-in-product-development"></a>
-          </div>
-
-          <div class="entry-container">
-            <div class="blog-overlay-content"><a class="blog-link"
-                href="https://blog.nityo.com/what-are-the-most-common-challenges-faced-in-product-development/"></a>
-              <div class="entry-content">
-                <p>What Are The Most Common Challenges Faced In Product Development?</p><a class="btn-line">Read
-                  More</a>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
+<div class="admjf my-5 py-5">
+  <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Name:</label>
+      <input formControlName="name" type="text" />
     </div>
-
-  </main>
+    <div>
+      <label>Mobile No:</label>
+      <input formControlName="mobileNo" type="text" />
+    </div>
+    <div>
+      <label>Username:</label>
+      <input formControlName="username" type="text" />
+    </div>
+    <div>
+      <label>Password:</label>
+      <input formControlName="password" type="password" />
+    </div>
+    <div>
+      <label>Email:</label>
+      <input formControlName="email" type="email" />
+    </div>
+    <div>
+      <label>Profile Picture:</label>
+      <input type="file" (change)="onFileSelected($event)" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-4 mb-2">Save Admin</button>
+  </form>
 </div>

@@ -104,17 +104,16 @@
                         name="title" />
                     </div>
 
+
+
                     <div class="mb-2">
-                      <label for="location" class="form-label">Location</label>
-                      <select class="form-select" id="location" required [(ngModel)]="newJob.location" name="location">
-                        <option value="" disabled selected>Select Location</option>
-                        <option value="India">India</option>
-                        <option value="Usa">Usa</option>
-                      </select>
+                      <label for="jobTitle" class="form-label">Location</label>
+                      <input type="text" class="form-control" id="location" required [(ngModel)]="newJob.location"
+                        name="title" />
                     </div>
 
 
-                    <div class="mb-2">
+                    <!-- <div class="mb-2">
                       <label for="category" class="form-label">Category</label>
                       <select class="form-select" id="category" required [(ngModel)]="newJob.category" name="category">
                         <option value="" disabled selected>Select Category</option>
@@ -122,7 +121,15 @@
                         <option value="Banking">Banking</option>
                         <option value="Healthcare">Healthcare</option>
                       </select>
+                    </div> -->
+
+                    <div class="mb-2">
+                      <label for="jobTitle" class="form-label">Category</label>
+                      <input type="text" class="form-control" id="category" required [(ngModel)]="newJob.category" name="category"
+                        />
                     </div>
+
+
 
 
 

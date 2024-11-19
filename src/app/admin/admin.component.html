@@ -38,11 +38,11 @@
           </a>
         </li>
 
-        <li class="nav-item mb-2">
+        <!-- <li class="nav-item mb-2">
           <a class="nav-link" [routerLink]="['/admin-blogs']">
             <i class="fas fa-folder-open text-danger"></i> Blogs
           </a>
-        </li>
+        </li> -->
 
       </ul>
     </nav>
@@ -65,7 +65,7 @@
             John David
           </span>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">My Profile</a></li>
+            <!-- <li><a class="dropdown-item" href="#">My Profile</a></li> -->
             <li><a class="dropdown-item" href="#">Log Out</a></li>
           </ul>
         </div>
@@ -351,6 +351,16 @@
     </div>
   </div>
 </div>
+
+<!-- <div *ngIf="admin">
+  <h3>Admin Details</h3>
+  <p><strong>ID:</strong> {{ admin.id }}</p>
+  <p><strong>Name:</strong> {{ admin.name }}</p>
+  <p><strong>Email:</strong> {{ admin.email }}</p>
+</div>
+<div *ngIf="error" style="color: red;">
+  {{ error }}
+</div> -->
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

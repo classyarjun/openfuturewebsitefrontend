@@ -57,7 +57,7 @@ export class AdminregisterComponent implements OnInit {
         (response) => {
           console.log(response);
           alert('Admin registered successfully');
-          this.router.navigate(['/login']); // Navigate to login after successful registration
+          this.router.navigate(['/adminlogin']); // Navigate to login after successful registration
         },
         (error) => {
           console.error(error);
@@ -69,6 +69,6 @@ export class AdminregisterComponent implements OnInit {
 
   // Navigate to login page
   navigateToLogin(): void {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/adminlogin']);
   }
 }

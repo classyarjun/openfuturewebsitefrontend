@@ -28,7 +28,7 @@ html, body {
 .footer {
   padding: 5vh 2%;
   color: white;
-  background-image: url('../../assets/footer bg.jpg');
+  background-image: url('src/assets/Recruitment Fraud Alert/product-bg (2).jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -43,13 +43,13 @@ html, body {
   align-items: center;
   padding: 2vh 2%;
   color: white;
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 /* Footer Links and Copyright */
 .copyright {
   font-size: 0.8rem;
-  margin-right: 20px;
+  margin-right: 780px;
 }
 
 .footer-links {
@@ -62,7 +62,7 @@ html, body {
 }
 
 .footer-links li {
-  margin-right: 15px;
+  margin-right: 12px;
 }
 
 .footer-links a {
@@ -172,6 +172,7 @@ li a:hover {
       font-size: 0.75rem;
   }
 
+
   /* Adjust the social media icons */
   .social-media a {
       font-size: 25px; /* Slightly smaller icons for small screens */
@@ -193,5 +194,13 @@ li a:hover {
   .social-media a {
       font-size: 40px;
   }
+}
+
+.footer-section hr {
+  border: none;
+  border-top: 2px solid rgb(247, 238, 238); /* Make the line thicker and white */
+  margin: 20px 0; /* Add spacing above and below */
+  width: 100%; /* Ensure the line spans the full width */
+  opacity: 0.8; /* Slight transparency for a softer look */
 }
 

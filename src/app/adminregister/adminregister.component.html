@@ -16,8 +16,8 @@
           <input formControlName="name" id="name" type="text" />
         </label>
         <div *ngIf="adminForm.get('name')?.invalid && adminForm.get('name')?.touched">
-          <small class="error" *ngIf="adminForm.get('name')?.hasError('required')">Name is required.</small>
-          <small class="error" *ngIf="adminForm.get('name')?.hasError('pattern')">Name must contain only letters and spaces.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('name')?.hasError('required')">Name is required.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('name')?.hasError('pattern')">Name must contain only letters and spaces.</small>
         </div>
       </div>
 
@@ -27,8 +27,8 @@
           <input formControlName="mobileNo" id="mobileNo" type="text" />
         </label>
         <div *ngIf="adminForm.get('mobileNo')?.invalid && adminForm.get('mobileNo')?.touched">
-          <small class="error" *ngIf="adminForm.get('mobileNo')?.hasError('required')">Mobile number is required.</small>
-          <small class="error" *ngIf="adminForm.get('mobileNo')?.hasError('pattern')">Enter a valid 10-digit mobile number.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('mobileNo')?.hasError('required')">Mobile number is required.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('mobileNo')?.hasError('pattern')">Enter a valid 10-digit mobile number.</small>
         </div>
       </div>
 
@@ -38,8 +38,8 @@
           <input formControlName="username" id="username" type="text" />
         </label>
         <div *ngIf="adminForm.get('username')?.invalid && adminForm.get('username')?.touched">
-          <small class="error" *ngIf="adminForm.get('username')?.hasError('required')">Username is required.</small>
-          <small class="error" *ngIf="adminForm.get('username')?.hasError('minlength')">Username must be at least 3 characters long.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('username')?.hasError('required')">Username is required.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('username')?.hasError('minlength')">Username must be at least 3 characters long.</small>
         </div>
       </div>
 
@@ -49,9 +49,9 @@
           <input formControlName="password" id="password" type="password" />
         </label>
         <div *ngIf="adminForm.get('password')?.invalid && adminForm.get('password')?.touched">
-          <small class="error" *ngIf="adminForm.get('password')?.hasError('required')">Password is required.</small>
-          <small class="error" *ngIf="adminForm.get('password')?.hasError('minlength')">Password must be at least 6 characters long.</small>
-          <small class="error" *ngIf="adminForm.get('password')?.hasError('pattern')">Password must contain at least one letter and one number.</small>
+          <small class="error text-danger" *ngIf="adminForm.get('password')?.hasError('minlength')">Password must be at least 6 characters long.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('password')?.hasError('required')">Password is required.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('password')?.hasError('pattern')">Password must contain at least one letter and one number.</small>
         </div>
       </div>
 
@@ -61,8 +61,8 @@
           <input formControlName="email" id="email" type="email" />
         </label>
         <div *ngIf="adminForm.get('email')?.invalid && adminForm.get('email')?.touched">
-          <small class="error" *ngIf="adminForm.get('email')?.hasError('required')">Email is required.</small>
-          <small class="error" *ngIf="adminForm.get('email')?.hasError('email')">Enter a valid email address.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('email')?.hasError('required')">Email is required.</small>
+          <small class="error  text-danger" *ngIf="adminForm.get('email')?.hasError('email')">Enter a valid email address.</small>
         </div>
       </div>
 

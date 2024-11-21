@@ -168,21 +168,6 @@ body {
   }
 }
 
-/* SAP Offerings Container */
-.sap-offerings-container {
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.sap-heading {
-  color: rgba(7, 181, 224, 1);
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  font-weight: bold;
-}
-
 /* Grid Layout */
 .sap-offerings-grid {
   display: grid;
@@ -190,7 +175,26 @@ body {
   gap: 20px;
 }
 
-/* Responsive Adjustments */
+.sap-card {
+  background-color: #fff;
+  border: 1px solid #ddd; /* Light gray border */
+  border-bottom: 10px solid #1d71b8; /* Blue border at the top */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; /* Ensure the hover-text stays inside the card */
+  margin-bottom: -1px; /* Negative margin to overlap with the next card */
+}
+
+.sap-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 20px; /* Space between cards */
+}
+
+/* Adjustments for responsiveness */
 @media (max-width: 768px) {
   .sap-offerings-grid {
       grid-template-columns: repeat(2, 1fr); /* For smaller screens */
@@ -217,6 +221,7 @@ body {
   font-weight: bold; /* Bold font */
   margin: 0 auto 15px auto; /* Center the square in the card */
 }
+
 
 .sap-card h4 {
   font-size: 1.2rem;
@@ -247,7 +252,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(44, 41, 54, 0.815); /* Blue color with slight transparency */
+  background-color: rgba(47, 9, 216, 0.9); /* Blue color with slight transparency */
   color: white;
   display: flex;
   align-items: center;
@@ -268,25 +273,22 @@ body {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .sap-offerings-grid {
-      grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 480px) {
   .sap-offerings-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
-
 .info-icon {
   width: 30px;
   height: 30px;
+ 
   font-size: 1.5rem; /* Adjust the size as needed */
   display: inline-block;
   margin-top: 4px; /* Optional: add spacing */
 }
-.right-side h1, .sap-heading {
-  background: linear-gradient(90deg, #08086d, #4a90e2, #bad7f4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
+

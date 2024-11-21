@@ -5,12 +5,14 @@ body {
   padding: 0;
 }
 
+/* ! About us leftside style */
 .aboutus-sec {
-  background: #1e3a8a;
   color: white;
-  /* padding: 50px 30px; */
+  padding: 50px 30px;
   position: relative;
   overflow: hidden;
+  /* background: linear-gradient(to right, #02218f, #054185, #02218f); */
+background-image: url("src/assets/Recruitment Fraud Alert/index.jpg");
 }
 
 .aboutus-sec .position-absolute img {

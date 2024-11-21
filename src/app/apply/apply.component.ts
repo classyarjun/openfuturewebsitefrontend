@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApplyService } from 'src/service/apply.service';
@@ -9,12 +8,11 @@ import { ApplyService } from 'src/service/apply.service';
   styleUrls: ['./apply.component.css']
 })
 export class ApplyComponent {
-
   applyForm: FormGroup;
   selectedFile: File | null = null;
+  showSuccessPopup = false; // Flag to show the success popup
 
   constructor(private fb: FormBuilder, private applyService: ApplyService) {
-    // Initialize form using FormBuilder
     this.applyForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -22,12 +20,9 @@ export class ApplyComponent {
       country: ['', Validators.required],
       mobileNumber: ['', Validators.required],
       location: ['', Validators.required],
-
-      admin: { id: 1 }  // Send the admin ID here, if needed
+      admin: { id: 1 }
     });
   }
-
-  ngOnInit(): void {}
 
   // Handle file selection
   onFileChange(event: any): void {
@@ -37,31 +32,30 @@ export class ApplyComponent {
   // On form submit
   onSubmit(): void {
     if (this.applyForm.invalid) {
-      return;  // Prevent submission if form is invalid
+      return;
     }
 
     const formData = new FormData();
-    // Append the form data
     formData.append('formData', JSON.stringify(this.applyForm.value));
-
-    // Append the CV file if it is selected
     if (this.selectedFile) {
       formData.append('cv', this.selectedFile, this.selectedFile.name);
     }
 
-    console.log('Form data being sent:', formData);
-
-    console.log('cv',this.selectedFile);
-
-    // Call the service to send the form data
     this.applyService.saveForm(formData).subscribe(
       response => {
         console.log('Form submitted successfully', response);
+        this.showSuccessPopup = true; // Show popup on success
       },
       error => {
         console.error('Error submitting form', error);
-        console.log('Error response body', error.error);
       }
     );
   }
+
+  // Close the popup
+  closePopup(): void {
+    this.showSuccessPopup = false;
+  }
 }
+
+ 
